@@ -815,8 +815,8 @@ select {
   display: grid;
 
   grid-template-columns:
-    minmax(0, 1fr)
-    minmax(0, 1fr);
+    0.55fr
+    1fr;
 
   gap: 45px;
 
