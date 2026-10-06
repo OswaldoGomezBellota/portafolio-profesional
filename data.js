@@ -12,6 +12,7 @@ const SITE = {
 
   email:
     "oswal_gomez@hotmail.com",
+
   cv:
     "#"
 };
@@ -30,14 +31,19 @@ const PROJECTS = [
   {
     id:
       "callmemaybe",
+
     title:
       "Análisis de operadores ineficaces",
+
     category:
       "data",
+
     categoryLabel:
       "Data Analytics",
+
     description:
       "Análisis de llamadas para identificar operadores con oportunidades de mejora mediante indicadores de llamadas perdidas, tiempo de espera y llamadas salientes.",
+
     tags: [
       "Python",
       "Pandas",
@@ -48,9 +54,12 @@ const PROJECTS = [
 
     featured:
       true,
+
     details: {
+
       objective:
         "Identificar operadores con oportunidades de mejora a partir de la información de llamadas, combinando indicadores de llamadas entrantes perdidas, tiempo de espera y volumen de llamadas salientes.",
+
       results: [
         "Se eliminaron 4,900 registros duplicados durante la limpieza de los datos.",
         "Después de la depuración se analizaron 49,002 registros de llamadas.",
@@ -60,18 +69,29 @@ const PROJECTS = [
       ],
 
       evidence: {
-        title: "Jupyter Notebook",
-        type: ".html",
-        previewUrl: "proyectos/01-data-analytics-bi/telecomunicaciones/Proyecto_Final_Telecomunicaciones.html",
+
+        title:
+          "Jupyter Notebook",
+
+        type:
+          ".html",
+
+        previewUrl:
+          "proyectos/01-data-analytics-bi/telecomunicaciones/Proyecto_Final_Telecomunicaciones.html",
+
         links: [
           {
-            label: "Abrir Notebook en GitHub",
-            url: "https://github.com/OswaldoGomezBellota/portafolio-profesional/blob/main/proyectos/01-data-analytics-bi/telecomunicaciones/Proyecto_Final_Telecomunicaciones.ipynb"
+            label:
+              "Abrir Notebook en GitHub",
+
+            url:
+              "https://github.com/OswaldoGomezBellota/portafolio-profesional/blob/main/proyectos/01-data-analytics-bi/telecomunicaciones/Proyecto_Final_Telecomunicaciones.ipynb"
           }
         ]
       }
     }
   },
+
 
   /* ==================================================
      02. SHOWZ
@@ -80,14 +100,19 @@ const PROJECTS = [
   {
     id:
       "showz",
+
     title:
       "Showz — Marketing Analytics",
+
     category:
       "data",
+
     categoryLabel:
       "Marketing Analytics",
+
     description:
       "Análisis de adquisición, conversión y rentabilidad de fuentes de marketing mediante métricas de producto, cohortes y rentabilidad.",
+
     tags: [
       "Python",
       "Pandas",
@@ -101,9 +126,9 @@ const PROJECTS = [
       true,
 
     details: {
+
       objective:
         "Evaluar el desempeño de adquisición, conversión y rentabilidad de las fuentes de marketing.",
-
 
       results: [
 
@@ -118,7 +143,6 @@ const PROJECTS = [
         "Se recomendó analizar conjuntamente CAC, LTV y ROMI para orientar la asignación de inversión."
 
       ],
-
 
       evidence: {
 
@@ -135,7 +159,6 @@ const PROJECTS = [
     }
 
   },
-
 
 
   /* ==================================================
@@ -173,12 +196,10 @@ const PROJECTS = [
 
     ],
 
-
     details: {
 
       objective:
         "Priorizar hipótesis de negocio y evaluar el efecto de una variante sobre conversión e ingresos mediante experimentación.",
-
 
       results: [
 
@@ -196,23 +217,42 @@ const PROJECTS = [
 
       ],
 
-
       evidence: {
 
         title:
-          "Prueba A/B",
+          "Jupyter Notebook",
 
         type:
-          "A/B",
+          ".html",
 
-        links: []
+        previewUrl:
+          "proyectos/01-data-analytics-bi/priorizacion-hipotesis-ab/Proyecto_Hipotesis_AB.html",
+
+        links: [
+
+          {
+            label:
+              "Abrir Notebook en GitHub",
+
+            url:
+              "https://github.com/OswaldoGomezBellota/portafolio-profesional/blob/main/proyectos/01-data-analytics-bi/priorizacion-hipotesis-ab/Proyecto_Hipotesis_AB.ipynb"
+          },
+
+          {
+            label:
+              "Ver proyecto en GitHub",
+
+            url:
+              "https://github.com/OswaldoGomezBellota/portafolio-profesional/tree/main/proyectos/01-data-analytics-bi/priorizacion-hipotesis-ab"
+          }
+
+        ]
 
       }
 
     }
 
   },
-
 
 
   /* ==================================================
@@ -252,12 +292,10 @@ const PROJECTS = [
 
     ],
 
-
     details: {
 
       objective:
         "Entender el comportamiento de los usuarios y validar mediante experimentación el efecto de un cambio de fuentes en la aplicación.",
-
 
       results: [
 
@@ -272,7 +310,6 @@ const PROJECTS = [
         "No se observaron diferencias estadísticamente significativas entre las nuevas fuentes y los grupos de control."
 
       ],
-
 
       evidence: {
 
@@ -289,7 +326,6 @@ const PROJECTS = [
     }
 
   },
-
 
 
   /* ==================================================
@@ -327,12 +363,10 @@ const PROJECTS = [
 
     ],
 
-
     details: {
 
       objective:
         "Identificar factores asociados a la cancelación de membresías y segmentos con distintos niveles de riesgo.",
-
 
       results: [
 
@@ -347,7 +381,6 @@ const PROJECTS = [
         "La segmentación identificó 5 grupos con distintos niveles de riesgo."
 
       ],
-
 
       evidence: {
 
@@ -364,7 +397,6 @@ const PROJECTS = [
     }
 
   },
-
 
 
   /* ==================================================
@@ -402,12 +434,10 @@ const PROJECTS = [
 
     ],
 
-
     details: {
 
       objective:
         "Evaluar si un nuevo sistema de recomendaciones mejoraba la conversión.",
-
 
       results: [
 
@@ -425,7 +455,6 @@ const PROJECTS = [
 
       ],
 
-
       evidence: {
 
         title:
@@ -441,7 +470,6 @@ const PROJECTS = [
     }
 
   },
-
 
 
   /* ==================================================
@@ -477,12 +505,10 @@ const PROJECTS = [
 
     ],
 
-
     details: {
 
       objective:
         "Responder preguntas de negocio a partir de una base de datos relacional de libros, autores, reseñas y calificaciones.",
-
 
       results: [
 
@@ -493,7 +519,6 @@ const PROJECTS = [
         "Se generaron resultados reproducibles para explorar la base de datos."
 
       ],
-
 
       evidence: {
 
@@ -510,7 +535,6 @@ const PROJECTS = [
     }
 
   },
-
 
 
   /* ==================================================
@@ -547,12 +571,10 @@ const PROJECTS = [
 
     ],
 
-
     details: {
 
       objective:
         "Presentar información mediante visualizaciones interactivas que faciliten el análisis y la comunicación de indicadores.",
-
 
       results: [
 
@@ -562,26 +584,45 @@ const PROJECTS = [
 
       ],
 
-
       evidence: {
-        title: "Dashboard en Tableau",
-        type: "TABLEAU",
-        previewUrl: "proyectos/01-data-analytics-bi/tableau-dashboard/assets/dashboard-tableau.png",
+
+        title:
+          "Dashboard en Tableau",
+
+        type:
+          "TABLEAU",
+
+        previewUrl:
+          "proyectos/01-data-analytics-bi/tableau-dashboard/assets/dashboard-tableau.png",
+
         links: [
+
           {
-            label: "Ver dashboard interactivo en Tableau Public",
-            url: "https://public.tableau.com/app/profile/oswaldo.gomez.bellota/viz/ProyFinal_Dashboard/Dashboard1?publish=yes"
+            label:
+              "Ver dashboard interactivo en Tableau Public",
+
+            url:
+              "https://public.tableau.com/app/profile/oswaldo.gomez.bellota/viz/ProyFinal_Dashboard/Dashboard1?publish=yes"
           },
+
           {
-            label: "Ver proyecto en GitHub",
-            url: "https://github.com/OswaldoGomezBellota/portafolio-profesional/tree/main/proyectos/01-data-analytics-bi/tableau-dashboard"
+            label:
+              "Ver proyecto en GitHub",
+
+            url:
+              "https://github.com/OswaldoGomezBellota/portafolio-profesional/tree/main/proyectos/01-data-analytics-bi/tableau-dashboard"
           }
+
         ]
+
       }
+
     }
+
   }
 
 ];
+
 
 /* ==================================================
    SKILLS
