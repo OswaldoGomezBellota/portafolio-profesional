@@ -22,7 +22,9 @@ const PROJECTS = [
 
   {
     id: "callmemaybe",
+
     title: "Análisis de operadores ineficaces",
+
     category: "data",
     categoryLabel: "Data Analytics",
 
@@ -40,6 +42,7 @@ const PROJECTS = [
     featured: true,
 
     details: {
+
       objective:
         "Identificar operadores con oportunidades de mejora a partir de la información de llamadas, combinando indicadores de llamadas entrantes perdidas, tiempo de espera y volumen de llamadas salientes.",
 
@@ -52,16 +55,19 @@ const PROJECTS = [
       ],
 
       evidence: {
+
         title: "Jupyter Notebook",
         type: ".html",
 
         previewUrl:
-          "proyectos/01-data-analytics-bi/showz-marketing-analytics/Proyecto_Showz_Analisis_Marketing.html",
+          "proyectos/01-data-analytics-bi/telecomunicaciones/Proyecto_Final_Telecomunicaciones.html",
+
         links: [
           {
             label: "Abrir Notebook en GitHub",
+
             url:
-              "https://github.com/OswaldoGomezBellota/portafolio-profesional/blob/main/proyectos/01-data-analytics-bi/showz-marketing-analytics/Proyecto_Showz_Analisis_Marketing.ipynb"
+              "https://github.com/OswaldoGomezBellota/portafolio-profesional/blob/main/proyectos/01-data-analytics-bi/telecomunicaciones/Proyecto_Final_Telecomunicaciones.ipynb"
           }
         ]
       }
@@ -75,7 +81,9 @@ const PROJECTS = [
 
   {
     id: "showz",
+
     title: "Showz — Marketing Analytics",
+
     category: "data",
     categoryLabel: "Marketing Analytics",
 
@@ -94,6 +102,7 @@ const PROJECTS = [
     featured: true,
 
     details: {
+
       objective:
         "Evaluar el desempeño de adquisición, conversión y rentabilidad de las fuentes de marketing.",
 
@@ -106,16 +115,13 @@ const PROJECTS = [
       ],
 
       evidence: {
+
         title: "Proyecto Showz",
         type: "ANALYTICS",
-        previewUrl: "proyectos/01-data-analytics-bi/showz/Proyecto_Showz.html",
-        links: [
-    {
-      label: "Ver proyecto en GitHub",
-      url: "https://github.com/OswaldoGomezBellota/portafolio-profesional/tree/main/proyectos/01-data-analytics-bi/showz"
+
+        links: []
+      }
     }
-  ]
-}
   },
 
 
@@ -143,6 +149,7 @@ const PROJECTS = [
     ],
 
     details: {
+
       objective:
         "Priorizar hipótesis de negocio y evaluar el efecto de una variante sobre conversión e ingresos mediante experimentación.",
 
@@ -156,6 +163,7 @@ const PROJECTS = [
       ],
 
       evidence: {
+
         title: "Jupyter Notebook",
         type: ".html",
 
@@ -163,6 +171,7 @@ const PROJECTS = [
           "proyectos/01-data-analytics-bi/priorizacion-hipotesis-ab/Proyecto_Hipotesis_AB.html",
 
         links: [
+
           {
             label: "Abrir Notebook en GitHub",
 
@@ -176,6 +185,7 @@ const PROJECTS = [
             url:
               "https://github.com/OswaldoGomezBellota/portafolio-profesional/tree/main/proyectos/01-data-analytics-bi/priorizacion-hipotesis-ab"
           }
+
         ]
       }
     }
@@ -207,6 +217,7 @@ const PROJECTS = [
     ],
 
     details: {
+
       objective:
         "Entender el comportamiento de los usuarios y validar mediante experimentación el efecto de un cambio de fuentes en la aplicación.",
 
@@ -219,8 +230,10 @@ const PROJECTS = [
       ],
 
       evidence: {
+
         title: "Jupyter Notebook",
         type: ".ipynb",
+
         links: []
       }
     }
@@ -251,6 +264,7 @@ const PROJECTS = [
     ],
 
     details: {
+
       objective:
         "Identificar factores asociados a la cancelación de membresías y segmentos con distintos niveles de riesgo.",
 
@@ -263,8 +277,10 @@ const PROJECTS = [
       ],
 
       evidence: {
+
         title: "Model Fitness",
         type: "MACHINE LEARNING",
+
         links: []
       }
     }
@@ -295,6 +311,7 @@ const PROJECTS = [
     ],
 
     details: {
+
       objective:
         "Evaluar si un nuevo sistema de recomendaciones mejoraba la conversión.",
 
@@ -308,8 +325,10 @@ const PROJECTS = [
       ],
 
       evidence: {
+
         title: "Prueba A/B de recomendaciones",
         type: "A/B",
+
         links: []
       }
     }
@@ -339,6 +358,7 @@ const PROJECTS = [
     ],
 
     details: {
+
       objective:
         "Responder preguntas de negocio a partir de una base de datos relacional de libros, autores, reseñas y calificaciones.",
 
@@ -349,8 +369,10 @@ const PROJECTS = [
       ],
 
       evidence: {
+
         title: "Proyecto SQL",
         type: "SQL",
+
         links: []
       }
     }
@@ -381,6 +403,7 @@ const PROJECTS = [
     ],
 
     details: {
+
       objective:
         "Presentar información mediante visualizaciones interactivas que faciliten el análisis y la comunicación de indicadores.",
 
@@ -390,6 +413,7 @@ const PROJECTS = [
       ],
 
       evidence: {
+
         title: "Dashboard en Tableau",
         type: "TABLEAU",
 
@@ -397,6 +421,7 @@ const PROJECTS = [
           "proyectos/01-data-analytics-bi/tableau-dashboard/assets/dashboard-tableau.png",
 
         links: [
+
           {
             label: "Ver dashboard interactivo en Tableau Public",
 
@@ -410,6 +435,7 @@ const PROJECTS = [
             url:
               "https://github.com/OswaldoGomezBellota/portafolio-profesional/tree/main/proyectos/01-data-analytics-bi/tableau-dashboard"
           }
+
         ]
       }
     }
