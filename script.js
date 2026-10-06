@@ -317,24 +317,43 @@ function openProjectDetail(projectId) {
       PREVIEW
     */
 
-    if (evidence.previewUrl) {
+if (evidence.previewUrl) {
 
-      preview.innerHTML = `
+  const isImage =
+    /\.(png|jpg|jpeg|webp|gif)$/i.test(
+      evidence.previewUrl
+    );
 
-        <iframe
-          src="${escapeHTML(
-            evidence.previewUrl
-          )}"
-          title="${escapeHTML(
+  if (isImage) {
+
+    preview.innerHTML = `
+      <div class="project-image-preview">
+        <img
+          src="${escapeHTML(evidence.previewUrl)}"
+          alt="${escapeHTML(
             evidence.title ||
             "Vista previa del proyecto"
           )}"
-          loading="lazy"
-        ></iframe>
+        />
+      </div>
+    `;
 
-      `;
+  } else {
 
-    } else {
+    preview.innerHTML = `
+      <iframe
+        src="${escapeHTML(evidence.previewUrl)}"
+        title="${escapeHTML(
+          evidence.title ||
+          "Vista previa del proyecto"
+        )}"
+        loading="lazy"
+      ></iframe>
+    `;
+
+  }
+
+} else {
 
       preview.innerHTML = `
 
@@ -736,14 +755,22 @@ document.addEventListener(
         closeProjectDetail
       );
 
-
-    window.addEventListener(
+     window.addEventListener(
       "hashchange",
       handleHash
     );
-
-
     handleHash();
-
   }
 );
+
+.project-image-preview {
+  width: 100%;
+  background: #ffffff;
+  overflow: hidden;
+}
+
+.project-image-preview img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
