@@ -108,9 +108,14 @@ const PROJECTS = [
       evidence: {
         title: "Proyecto Showz",
         type: "ANALYTICS",
-        links: []
-      }
+        previewUrl: "proyectos/01-data-analytics-bi/showz/Proyecto_Showz.html",
+        links: [
+    {
+      label: "Ver proyecto en GitHub",
+      url: "https://github.com/OswaldoGomezBellota/portafolio-profesional/tree/main/proyectos/01-data-analytics-bi/showz"
     }
+  ]
+}
   },
 
 
