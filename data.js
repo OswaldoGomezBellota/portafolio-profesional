@@ -116,10 +116,34 @@ const PROJECTS = [
 
       evidence: {
 
-        title: "Proyecto Showz",
-        type: "ANALYTICS",
+        title: "Jupyter Notebook",
+        type: ".html",
 
-        links: []
+        previewUrl:
+          "proyectos/01-data-analytics-bi/showz-marketing-analytics/Proyecto_Showz_Analisis_Marketing.html",
+
+        links: [
+          {
+            label: "Abrir proyecto HTML",
+
+            url:
+              "https://oswaldogomezbellota.github.io/portafolio-profesional/proyectos/01-data-analytics-bi/showz-marketing-analytics/Proyecto_Showz_Analisis_Marketing.html"
+          },
+
+          {
+            label: "Abrir Notebook en GitHub",
+
+            url:
+              "https://github.com/OswaldoGomezBellota/portafolio-profesional/blob/main/proyectos/01-data-analytics-bi/showz-marketing-analytics/Proyecto_Showz_Analisis_Marketing.ipynb"
+          },
+
+          {
+            label: "Ver proyecto en GitHub",
+
+            url:
+              "https://github.com/OswaldoGomezBellota/portafolio-profesional/tree/main/proyectos/01-data-analytics-bi/showz-marketing-analytics"
+          }
+        ]
       }
     }
   },
@@ -171,7 +195,6 @@ const PROJECTS = [
           "proyectos/01-data-analytics-bi/priorizacion-hipotesis-ab/Proyecto_Hipotesis_AB.html",
 
         links: [
-
           {
             label: "Abrir Notebook en GitHub",
 
@@ -185,7 +208,6 @@ const PROJECTS = [
             url:
               "https://github.com/OswaldoGomezBellota/portafolio-profesional/tree/main/proyectos/01-data-analytics-bi/priorizacion-hipotesis-ab"
           }
-
         ]
       }
     }
@@ -421,7 +443,6 @@ const PROJECTS = [
           "proyectos/01-data-analytics-bi/tableau-dashboard/assets/dashboard-tableau.png",
 
         links: [
-
           {
             label: "Ver dashboard interactivo en Tableau Public",
 
@@ -435,7 +456,6 @@ const PROJECTS = [
             url:
               "https://github.com/OswaldoGomezBellota/portafolio-profesional/tree/main/proyectos/01-data-analytics-bi/tableau-dashboard"
           }
-
         ]
       }
     }
