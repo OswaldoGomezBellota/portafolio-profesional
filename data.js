@@ -23,7 +23,7 @@ const PROJECTS = [
     description: "Análisis principal, dashboard, presentación y pruebas A/B reunidos en un proyecto integral.",
     tags: ["Python", "SQL", "Tableau", "Estadística"],
     featured: true,
-    link: "#"
+    link: "https://github.com/OswaldoGomezBellota/portafolio-profesional/blob/main/proyectos/01-data-analytics-bi/telecomunicaciones/Proyecto_Final_Telecomunicaciones.ipynb"
   },
   {
     title: "Análisis de operadores ineficaces",
@@ -32,7 +32,7 @@ const PROJECTS = [
     description: "CallMeMaybe: análisis de llamadas para identificar operadores con oportunidades de mejora.",
     tags: ["Python", "Pandas", "SciPy", "Tableau"],
     featured: true,
-    link: "https://github.com/OswaldoGomezBellota/portafolio-profesional/blob/main/proyectos/01-data-analytics-bi/telecomunicaciones/Proyecto_Final_Telecomunicaciones.ipynb"
+    link: "#"
   },
   {
     title: "Showz — Marketing Analytics",
