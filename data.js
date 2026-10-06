@@ -4,7 +4,7 @@
 
 const SITE = {
   github: "https://github.com/OswaldoGomezBellota/portafolio-profesional",
-  linkedin: "#",
+  linkedin: "https://www.linkedin.com/in/oswaldo-alexander-gomez-bellota-512520163",
   email: "oswal_gomez@hotmail.com",
   cv: "#"
 };
