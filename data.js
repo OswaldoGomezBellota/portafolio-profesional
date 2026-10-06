@@ -56,14 +56,12 @@ const PROJECTS = [
         type: ".html",
 
         previewUrl:
-          "proyectos/01-data-analytics-bi/telecomunicaciones/Proyecto_Final_Telecomunicaciones.html",
-
+          "proyectos/01-data-analytics-bi/showz-marketing-analytics/Proyecto_Showz_Analisis_Marketing.html",
         links: [
           {
             label: "Abrir Notebook en GitHub",
-
             url:
-              "https://github.com/OswaldoGomezBellota/portafolio-profesional/blob/main/proyectos/01-data-analytics-bi/telecomunicaciones/Proyecto_Final_Telecomunicaciones.ipynb"
+              "https://github.com/OswaldoGomezBellota/portafolio-profesional/blob/main/proyectos/01-data-analytics-bi/showz-marketing-analytics/Proyecto_Showz_Analisis_Marketing.ipynb"
           }
         ]
       }
