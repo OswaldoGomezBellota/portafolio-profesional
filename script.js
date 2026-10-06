@@ -762,15 +762,3 @@ document.addEventListener(
     handleHash();
   }
 );
-
-.project-image-preview {
-  width: 100%;
-  background: #ffffff;
-  overflow: hidden;
-}
-
-.project-image-preview img {
-  display: block;
-  width: 100%;
-  height: auto;
-}
