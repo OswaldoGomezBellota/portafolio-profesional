@@ -345,55 +345,7 @@ const PROJECTS = [
 
 
   /* ==================================================
-     06. SISTEMA DE RECOMENDACIONES
-  ================================================== */
-
-  {
-    id: "ab-recomendaciones",
-
-    title: "Prueba A/B de sistema de recomendaciones",
-
-    category: "data",
-    categoryLabel: "Experimentación",
-
-    description:
-      "Evaluación de un nuevo sistema de recomendaciones mediante análisis exploratorio, embudo y prueba z de proporciones.",
-
-    tags: [
-      "Python",
-      "Pandas",
-      "NumPy",
-      "SciPy",
-      "A/B Testing"
-    ],
-
-    details: {
-
-      objective:
-        "Evaluar si un nuevo sistema de recomendaciones mejoraba la conversión.",
-
-      results: [
-        "Se realizó análisis exploratorio.",
-        "Se validó la participación de los usuarios.",
-        "Se analizó el embudo de conversión.",
-        "Se realizó análisis temporal de los eventos.",
-        "Se aplicó una prueba z de proporciones.",
-        "El grupo experimental no alcanzó la mejora esperada."
-      ],
-
-      evidence: {
-
-        title: "Prueba A/B de recomendaciones",
-        type: "A/B",
-
-        links: []
-      }
-    }
-  },
-
-
-  /* ==================================================
-     07. VIDEOJUEGOS — ICE
+     06. VIDEOJUEGOS — ICE
   ================================================== */
 
   {
@@ -467,51 +419,7 @@ const PROJECTS = [
 
 
   /* ==================================================
-     08. LIBROS SQL
-  ================================================== */
-
-  {
-    id: "books-sql",
-
-    title: "Análisis de datos de libros",
-
-    category: "data",
-    categoryLabel: "SQL",
-
-    description:
-      "Consultas relacionales para responder preguntas de negocio sobre libros, autores, reseñas y calificaciones.",
-
-    tags: [
-      "SQL",
-      "PostgreSQL",
-      "JOIN",
-      "GROUP BY"
-    ],
-
-    details: {
-
-      objective:
-        "Responder preguntas de negocio a partir de una base de datos relacional de libros, autores, reseñas y calificaciones.",
-
-      results: [
-        "Se construyeron consultas utilizando filtros y agregaciones.",
-        "Se trabajó con relaciones entre diferentes tablas.",
-        "Se generaron resultados reproducibles para explorar la base de datos."
-      ],
-
-      evidence: {
-
-        title: "Proyecto SQL",
-        type: "SQL",
-
-        links: []
-      }
-    }
-  },
-
-
-  /* ==================================================
-     09. DASHBOARD TABLEAU
+     07. DASHBOARD TABLEAU
      PROYECTO INDEPENDIENTE
   ================================================== */
 
