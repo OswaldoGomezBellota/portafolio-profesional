@@ -5,15 +5,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Portafolio profesional de Oswaldo Alexander Gómez Bellota. Data Analytics, Business Intelligence, Sistemas, Gestión de Proyectos y Transformación Digital.">
   <title>Oswaldo Gómez | Portafolio Profesional</title>
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
 <header class="navbar">
   <a class="brand" href="#inicio">OG<span>.</span></a>
+
   <nav>
     <a href="#inicio">Inicio</a>
     <a href="#sobre-mi">Sobre mí</a>
@@ -22,95 +26,577 @@
     <a href="#skills">Skills</a>
     <a href="#contacto">Contacto</a>
   </nav>
-  <a class="nav-github" id="githubNav" href="#" target="_blank" rel="noopener">GitHub ↗</a>
+
+  <a
+    class="nav-github"
+    id="githubNav"
+    href="#"
+    target="_blank"
+    rel="noopener"
+  >
+    GitHub ↗
+  </a>
 </header>
 
 <main>
-<section id="inicio" class="hero">
-  <div class="hero-glow glow-one"></div><div class="hero-glow glow-two"></div>
-  <div class="hero-content">
-    <div class="hero-copy">
-      <p class="eyebrow">PORTAFOLIO PROFESIONAL</p>
-      <h1>Oswaldo Alexander<br><span>Gómez Bellota</span></h1>
-      <p class="role">Data Analytics · Business Intelligence</p>
-      <p class="hero-text">Conecto datos, tecnología y negocio para transformar información y procesos en decisiones, mejoras y resultados.</p>
-      <div class="hero-actions">
-        <a class="btn btn-primary" href="#proyectos">Explorar proyectos →</a>
-        <a class="btn btn-light" href="#contacto">Contactarme</a>
+
+  <!-- =========================
+       INICIO
+  ========================== -->
+
+  <section id="inicio" class="hero">
+
+    <div class="hero-glow glow-one"></div>
+    <div class="hero-glow glow-two"></div>
+
+    <div class="hero-content">
+
+      <div class="hero-copy">
+
+        <p class="eyebrow">PORTAFOLIO PROFESIONAL</p>
+
+        <h1>
+          Oswaldo Alexander<br>
+          <span>Gómez Bellota</span>
+        </h1>
+
+        <p class="role">
+          Data Analytics · Business Intelligence
+        </p>
+
+        <p class="hero-text">
+          Conecto datos, tecnología y negocio para transformar información
+          y procesos en decisiones, mejoras y resultados.
+        </p>
+
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#proyectos">
+            Explorar proyectos →
+          </a>
+
+          <a class="btn btn-light" href="#contacto">
+            Contactarme
+          </a>
+        </div>
+
+        <div class="hero-meta">
+          <span>Data Analytics</span>
+          <span>BI</span>
+          <span>Sistemas</span>
+          <span>Project Management</span>
+        </div>
+
       </div>
-      <div class="hero-meta">
-        <span>Data Analytics</span><span>BI</span><span>Sistemas</span><span>Project Management</span>
+
+      <div class="photo-wrap">
+
+        <div class="photo-ring"></div>
+
+        <img
+          src="assets/portada.png"
+          alt="Oswaldo Alexander Gómez Bellota"
+          class="profile-photo"
+        >
+
+        <div class="photo-badge">
+          <strong>Business + Technology</strong>
+          <span>Data · Systems · Projects</span>
+        </div>
+
       </div>
+
     </div>
-    <div class="photo-wrap">
-      <div class="photo-ring"></div>
-      <img src="assets/portada.png" alt="Oswaldo Alexander Gómez Bellota" class="profile-photo">
-      <div class="photo-badge"><strong>Business + Technology</strong><span>Data · Systems · Projects</span></div>
+
+  </section>
+
+
+  <!-- =========================
+       SOBRE MÍ
+  ========================== -->
+
+  <section id="sobre-mi" class="light-section">
+
+    <div class="section-label">
+      SOBRE MÍ
     </div>
-  </div>
-</section>
 
-<section id="sobre-mi" class="light-section">
-  <div class="section-label">SOBRE MÍ</div>
-  <div class="section-heading">
-    <h2>Un perfil que conecta<br>varias disciplinas.</h2>
-    <p>La estructura del portafolio no te encasilla como Data Analyst. Presenta tu trayectoria como un conjunto de capacidades que se complementan.</p>
-  </div>
-  <div class="domain-grid">
-    <article class="domain-card"><span>01</span><h3>Data Analytics</h3><p>SQL, Python, análisis exploratorio y estadístico, segmentación, cohortes, embudos y experimentación.</p><a href="#proyectos" data-filter-link="data">Ver proyectos →</a></article>
-    <article class="domain-card"><span>02</span><h3>Business Intelligence</h3><p>Dashboards, reporting, visualización, storytelling de datos y herramientas BI.</p><a href="#proyectos" data-filter-link="bi">Ver proyectos →</a></article>
-    <article class="domain-card"><span>03</span><h3>Sistemas & Tecnología</h3><p>Gestión de información, bases de datos, integraciones, sistemas y procesos tecnológicos.</p><a href="#proyectos" data-filter-link="systems">Ver proyectos →</a></article>
-    <article class="domain-card"><span>04</span><h3>Gestión de Proyectos</h3><p>Seguimiento, transformación digital, metodologías, coordinación y gestión orientada a resultados.</p><a href="#proyectos" data-filter-link="projects">Ver proyectos →</a></article>
-  </div>
-</section>
+    <div class="section-heading">
 
-<section id="proyectos" class="light-section projects">
-  <div class="section-label">PROYECTOS</div>
-  <div class="section-heading">
-    <h2>Una sola plataforma.<br>Distintos tipos de proyectos.</h2>
-    <p>Los proyectos se cargan desde un archivo de datos. Para agregar uno nuevo no necesitas modificar la estructura de la página.</p>
-  </div>
-  <div class="filters" id="filters">
-    <button class="filter active" data-filter="all">Todos</button>
-    <button class="filter" data-filter="data">Data Analytics</button>
-    <button class="filter" data-filter="bi">BI & Dashboards</button>
-    <button class="filter" data-filter="systems">Sistemas</button>
-    <button class="filter" data-filter="projects">Gestión de Proyectos</button>
-    <button class="filter" data-filter="other">Otros</button>
-  </div>
-  <div class="project-grid" id="projectGrid"></div>
-</section>
+      <h2>
+        Un perfil que conecta<br>
+        varias disciplinas.
+      </h2>
 
-<section id="experiencia" class="dark-section">
-  <div class="section-label blue-label">EXPERIENCIA & CAPACIDADES</div>
-  <h2>No solo analizo datos.<br>Entiendo el contexto donde se utilizan.</h2>
-  <div class="timeline">
-    <div class="timeline-item"><span>01</span><div><h3>Negocio & Procesos</h3><p>Ingeniería Empresarial y de Sistemas + MBA en Negocios Internacionales. Análisis de procesos, información y necesidades de negocio.</p></div></div>
-    <div class="timeline-item"><span>02</span><div><h3>Sistemas & Transformación Digital</h3><p>Experiencia relacionada con sistemas, integraciones, gestión de información y seguimiento de iniciativas de transformación digital.</p></div></div>
-    <div class="timeline-item"><span>03</span><div><h3>Analytics & BI</h3><p>Desarrollo de análisis, dashboards y reportes para apoyar el control operativo y la toma de decisiones.</p></div></div>
-    <div class="timeline-item"><span>04</span><div><h3>Gestión & Mejora</h3><p>Gestión de proyectos, metodologías, riesgos y coordinación entre equipos técnicos y usuarios.</p></div></div>
-  </div>
-</section>
+      <p>
+        La estructura del portafolio no te encasilla como Data Analyst.
+        Presenta tu trayectoria como un conjunto de capacidades que se complementan.
+      </p>
 
-<section id="skills" class="light-section">
-  <div class="section-label">STACK & COMPETENCIAS</div>
-  <div class="section-heading">
-    <h2>Herramientas y<br>capacidades.</h2>
-    <p>Esta sección también es ampliable. Se pueden agregar nuevas tecnologías, certificaciones o competencias sin rediseñar el sitio.</p>
-  </div>
-  <div class="skill-groups" id="skillGroups"></div>
-</section>
+    </div>
 
-<section id="contacto" class="contact light-section">
-  <div class="contact-box">
-    <div><div class="section-label">CONTACTO</div><h2>¿Hablamos de datos,<br>negocio o proyectos?</h2><p>Disponible para oportunidades donde pueda combinar análisis, tecnología, procesos y visión de negocio.</p></div>
-    <div class="contact-links" id="contactLinks"></div>
-  </div>
-</section>
+    <div class="domain-grid">
+
+      <article class="domain-card">
+        <span>01</span>
+
+        <h3>
+          Data Analytics
+        </h3>
+
+        <p>
+          SQL, Python, análisis exploratorio y estadístico,
+          segmentación, cohortes, embudos y experimentación.
+        </p>
+
+        <a href="#proyectos" data-filter-link="data">
+          Ver proyectos →
+        </a>
+      </article>
+
+
+      <article class="domain-card">
+        <span>02</span>
+
+        <h3>
+          Business Intelligence
+        </h3>
+
+        <p>
+          Dashboards, reporting, visualización, storytelling
+          de datos y herramientas BI.
+        </p>
+
+        <a href="#proyectos" data-filter-link="bi">
+          Ver proyectos →
+        </a>
+      </article>
+
+
+      <article class="domain-card">
+        <span>03</span>
+
+        <h3>
+          Sistemas & Tecnología
+        </h3>
+
+        <p>
+          Gestión de información, bases de datos, integraciones,
+          sistemas y procesos tecnológicos.
+        </p>
+
+        <a href="#proyectos" data-filter-link="systems">
+          Ver proyectos →
+        </a>
+      </article>
+
+
+      <article class="domain-card">
+        <span>04</span>
+
+        <h3>
+          Gestión de Proyectos
+        </h3>
+
+        <p>
+          Seguimiento, transformación digital, metodologías,
+          coordinación y gestión orientada a resultados.
+        </p>
+
+        <a href="#proyectos" data-filter-link="projects">
+          Ver proyectos →
+        </a>
+      </article>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       PROYECTOS
+  ========================== -->
+
+  <section id="proyectos" class="light-section projects">
+
+    <div class="section-label">
+      PROYECTOS
+    </div>
+
+    <div class="section-heading">
+
+      <h2>
+        Una sola plataforma.<br>
+        Distintos tipos de proyectos.
+      </h2>
+
+      <p>
+        Los proyectos se cargan desde un archivo de datos.
+        Para agregar uno nuevo no necesitas modificar la estructura de la página.
+      </p>
+
+    </div>
+
+
+    <!-- FILTROS -->
+
+    <div class="filters" id="filters">
+
+      <button
+        class="filter active"
+        data-filter="all"
+      >
+        Todos
+      </button>
+
+      <button
+        class="filter"
+        data-filter="data"
+      >
+        Data Analytics
+      </button>
+
+      <button
+        class="filter"
+        data-filter="bi"
+      >
+        BI & Dashboards
+      </button>
+
+      <button
+        class="filter"
+        data-filter="systems"
+      >
+        Sistemas
+      </button>
+
+      <button
+        class="filter"
+        data-filter="projects"
+      >
+        Gestión de Proyectos
+      </button>
+
+      <button
+        class="filter"
+        data-filter="other"
+      >
+        Otros
+      </button>
+
+    </div>
+
+
+    <!-- GRID DE PROYECTOS -->
+
+    <div
+      class="project-grid"
+      id="projectGrid"
+    ></div>
+
+  </section>
+
+
+  <!-- =========================
+       DETALLE DE PROYECTO
+  ========================== -->
+
+  <section
+    id="project-detail"
+    class="light-section project-detail"
+    hidden
+  >
+
+    <div class="project-detail-inner">
+
+      <button
+        id="backToProjects"
+        class="project-back"
+        type="button"
+      >
+        ← Volver a proyectos
+      </button>
+
+
+      <div class="section-label">
+        PROYECTO
+      </div>
+
+
+      <div class="project-detail-heading">
+
+        <h2 id="projectDetailTitle"></h2>
+
+        <p id="projectDetailDescription"></p>
+
+      </div>
+
+
+      <div class="project-detail-content">
+
+        <!-- OBJETIVO -->
+
+        <div class="project-detail-block">
+
+          <h3>
+            Objetivo
+          </h3>
+
+          <p id="projectDetailObjective"></p>
+
+        </div>
+
+
+        <!-- RESULTADOS -->
+
+        <div class="project-detail-block">
+
+          <h3>
+            Resultados
+          </h3>
+
+          <div id="projectDetailResults"></div>
+
+        </div>
+
+
+        <!-- HERRAMIENTAS -->
+
+        <div class="project-detail-block">
+
+          <h3>
+            Herramientas
+          </h3>
+
+          <div
+            id="projectDetailTags"
+            class="tags"
+          ></div>
+
+        </div>
+
+
+        <!-- ENTREGABLES -->
+
+        <div class="project-detail-block">
+
+          <h3>
+            Entregables
+          </h3>
+
+          <div
+            id="projectDetailLinks"
+            class="project-detail-links"
+          ></div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       EXPERIENCIA
+  ========================== -->
+
+  <section id="experiencia" class="dark-section">
+
+    <div class="section-label blue-label">
+      EXPERIENCIA & CAPACIDADES
+    </div>
+
+    <h2>
+      No solo analizo datos.<br>
+      Entiendo el contexto donde se utilizan.
+    </h2>
+
+    <div class="timeline">
+
+      <div class="timeline-item">
+
+        <span>01</span>
+
+        <div>
+
+          <h3>
+            Negocio & Procesos
+          </h3>
+
+          <p>
+            Ingeniería Empresarial y de Sistemas + MBA en Negocios Internacionales.
+            Análisis de procesos, información y necesidades de negocio.
+          </p>
+
+        </div>
+
+      </div>
+
+
+      <div class="timeline-item">
+
+        <span>02</span>
+
+        <div>
+
+          <h3>
+            Sistemas & Transformación Digital
+          </h3>
+
+          <p>
+            Experiencia relacionada con sistemas, integraciones,
+            gestión de información y seguimiento de iniciativas
+            de transformación digital.
+          </p>
+
+        </div>
+
+      </div>
+
+
+      <div class="timeline-item">
+
+        <span>03</span>
+
+        <div>
+
+          <h3>
+            Analytics & BI
+          </h3>
+
+          <p>
+            Desarrollo de análisis, dashboards y reportes para apoyar
+            el control operativo y la toma de decisiones.
+          </p>
+
+        </div>
+
+      </div>
+
+
+      <div class="timeline-item">
+
+        <span>04</span>
+
+        <div>
+
+          <h3>
+            Gestión & Mejora
+          </h3>
+
+          <p>
+            Gestión de proyectos, metodologías, riesgos y coordinación
+            entre equipos técnicos y usuarios.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       SKILLS
+  ========================== -->
+
+  <section id="skills" class="light-section">
+
+    <div class="section-label">
+      STACK & COMPETENCIAS
+    </div>
+
+    <div class="section-heading">
+
+      <h2>
+        Herramientas y<br>
+        capacidades.
+      </h2>
+
+      <p>
+        Esta sección también es ampliable.
+        Se pueden agregar nuevas tecnologías, certificaciones o competencias
+        sin rediseñar el sitio.
+      </p>
+
+    </div>
+
+    <div
+      class="skill-groups"
+      id="skillGroups"
+    ></div>
+
+  </section>
+
+
+  <!-- =========================
+       CONTACTO
+  ========================== -->
+
+  <section
+    id="contacto"
+    class="contact light-section"
+  >
+
+    <div class="contact-box">
+
+      <div>
+
+        <div class="section-label">
+          CONTACTO
+        </div>
+
+        <h2>
+          ¿Hablamos de datos,<br>
+          negocio o proyectos?
+        </h2>
+
+        <p>
+          Disponible para oportunidades donde pueda combinar análisis,
+          tecnología, procesos y visión de negocio.
+        </p>
+
+      </div>
+
+
+      <div
+        class="contact-links"
+        id="contactLinks"
+      ></div>
+
+    </div>
+
+  </section>
+
 </main>
 
-<footer><span>© 2026 Oswaldo Gómez</span><span>Data · Business · Technology · Projects</span></footer>
+
+<!-- =========================
+     FOOTER
+========================== -->
+
+<footer>
+
+  <span>
+    © 2026 Oswaldo Gómez
+  </span>
+
+  <span>
+    Data · Business · Technology · Projects
+  </span>
+
+</footer>
+
+
+<!-- =========================
+     JAVASCRIPT
+========================== -->
+
 <script src="data.js"></script>
 <script src="script.js"></script>
+
 </body>
 </html>
