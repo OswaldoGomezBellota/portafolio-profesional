@@ -1,6 +1,6 @@
 /* ==================================================
    CONFIGURACIÓN DEL SITIO
-=================================================== */
+================================================== */
 
 const SITE = {
   github: "https://github.com/OswaldoGomezBellota/portafolio-profesional",
@@ -12,7 +12,7 @@ const SITE = {
 
 /* ==================================================
    PROYECTOS
-=================================================== */
+================================================== */
 
 const PROJECTS = [
 
@@ -393,7 +393,81 @@ const PROJECTS = [
 
 
   /* ==================================================
-     07. LIBROS SQL
+     07. VIDEOJUEGOS — ICE
+  ================================================== */
+
+  {
+    id: "videojuegos-ice",
+
+    title: "Análisis de videojuegos — ICE",
+
+    category: "data",
+    categoryLabel: "Data Analytics",
+
+    description:
+      "Análisis de ventas y comportamiento del mercado de videojuegos para identificar plataformas, géneros y tendencias relevantes para orientar la estrategia comercial de ICE hacia 2017.",
+
+    tags: [
+      "Python",
+      "Pandas",
+      "Estadística",
+      "Análisis de datos",
+      "Jupyter Notebook"
+    ],
+
+    featured: true,
+
+    details: {
+
+      objective:
+        "Analizar el comportamiento histórico de las ventas de videojuegos, identificar plataformas con potencial para 2017, estudiar diferencias por género y región, y evaluar hipótesis estadísticas sobre las calificaciones de los usuarios.",
+
+      results: [
+        "El análisis del periodo 2010-2016 permitió comparar el comportamiento de las principales plataformas y géneros del mercado.",
+        "Entre 2015 y 2016, PS4 registró 188.15 millones de ventas y XOne 86.29 millones, destacando entre las plataformas con mejores ventas recientes.",
+        "La prueba de hipótesis entre las calificaciones de usuarios de XOne y PC obtuvo p = 4.248e-06, por lo que se rechazó H0 y se concluyó que las medias son diferentes.",
+        "La prueba entre las calificaciones de los géneros Action y Sports obtuvo p = 0.0570, por lo que no se rechazó H0.",
+        "El análisis mostró diferencias regionales en las preferencias de géneros, por lo que la estrategia comercial debe considerar el comportamiento específico de cada mercado.",
+        "El proyecto utiliza el análisis de datos y las pruebas estadísticas como base para orientar la estrategia comercial de ICE hacia 2017."
+      ],
+
+      evidence: {
+
+        title: "Proyecto de análisis de videojuegos",
+        type: ".html",
+
+        previewUrl:
+          "proyectos/01-data-analytics-bi/videojuegos-analisis-ice/Proyecto_Videojuegos_Analisis_ICE.html",
+
+        links: [
+          {
+            label: "Abrir proyecto HTML",
+
+            url:
+              "https://oswaldogomezbellota.github.io/portafolio-profesional/proyectos/01-data-analytics-bi/videojuegos-analisis-ice/Proyecto_Videojuegos_Analisis_ICE.html"
+          },
+
+          {
+            label: "Abrir Notebook en GitHub",
+
+            url:
+              "https://github.com/OswaldoGomezBellota/portafolio-profesional/blob/main/proyectos/01-data-analytics-bi/videojuegos-analisis-ice/Proyecto_Videojuegos_Analisis_ICE.ipynb"
+          },
+
+          {
+            label: "Ver proyecto en GitHub",
+
+            url:
+              "https://github.com/OswaldoGomezBellota/portafolio-profesional/tree/main/proyectos/01-data-analytics-bi/videojuegos-analisis-ice"
+          }
+        ]
+      }
+    }
+  },
+
+
+  /* ==================================================
+     08. LIBROS SQL
   ================================================== */
 
   {
@@ -437,7 +511,7 @@ const PROJECTS = [
 
 
   /* ==================================================
-     08. DASHBOARD TABLEAU
+     09. DASHBOARD TABLEAU
      PROYECTO INDEPENDIENTE
   ================================================== */
 
@@ -501,7 +575,7 @@ const PROJECTS = [
 
 /* ==================================================
    SKILLS
-=================================================== */
+================================================== */
 
 const SKILLS = [
 
