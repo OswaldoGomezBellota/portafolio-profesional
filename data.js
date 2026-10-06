@@ -32,7 +32,7 @@ const PROJECTS = [
     description: "CallMeMaybe: análisis de llamadas para identificar operadores con oportunidades de mejora.",
     tags: ["Python", "Pandas", "SciPy", "Tableau"],
     featured: true,
-    link: "proyectos/01-data-analytics-bi/telecomunicaciones/"
+    link: "https://github.com/oswaldogomezbellota/portafolio-profesional/blob/main/proyectos/01-data-analytics-bi/telecomunicaciones/Proyecto_Final_Telecomunicaciones.ipynb"
   },
   {
     title: "Showz — Marketing Analytics",
