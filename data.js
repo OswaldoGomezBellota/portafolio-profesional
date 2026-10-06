@@ -60,16 +60,12 @@ const PROJECTS = [
       ],
 
       evidence: {
-        title:
-          "Jupyter Notebook",
-        type:
-          ".ipynb",
-        previewUrl:
-          "proyectos/01-data-analytics-bi/telecomunicaciones/Proyecto_Final_Telecomunicaciones.html",
+        title: "Jupyter Notebook",
+        type: ".html",
+        previewUrl: "proyectos/01-data-analytics-bi/telecomunicaciones/Proyecto_Final_Telecomunicaciones.html",
         links: [
           {
-            label:
-              "Abrir Notebook en GitHub",            
+            label: "Abrir Notebook en GitHub",
             url: "https://github.com/OswaldoGomezBellota/portafolio-profesional/blob/main/proyectos/01-data-analytics-bi/telecomunicaciones/Proyecto_Final_Telecomunicaciones.ipynb"
           }
         ]
