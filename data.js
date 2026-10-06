@@ -221,7 +221,7 @@ const PROJECTS = [
   {
     id: "aaab",
 
-    title: "Análisis de embudo y experimento A/A/B",
+    title: "A/A/B — Análisis de embudo y experimento",
 
     category: "data",
     categoryLabel: "Experimentación",
@@ -235,7 +235,8 @@ const PROJECTS = [
       "NumPy",
       "Matplotlib",
       "Statsmodels",
-      "Jupyter Notebook"
+      "Jupyter Notebook",
+      "A/A/B Testing"
     ],
 
     details: {
@@ -254,9 +255,26 @@ const PROJECTS = [
       evidence: {
 
         title: "Jupyter Notebook",
-        type: ".ipynb",
+        type: ".html",
 
-        links: []
+        previewUrl:
+          "proyectos/01-data-analytics-bi/aab-Analisis-de-embudo-experimento/Proyecto_AAAB_Analisis_Embudo_Experimento.html",
+
+        links: [
+          {
+            label: "Abrir Notebook en GitHub",
+
+            url:
+              "https://github.com/OswaldoGomezBellota/portafolio-profesional/blob/main/proyectos/01-data-analytics-bi/aab-Analisis-de-embudo-experimento/Proyecto_AAAB_Analisis_Embudo_Experimento.ipynb"
+          },
+
+          {
+            label: "Ver proyecto en GitHub",
+
+            url:
+              "https://github.com/OswaldoGomezBellota/portafolio-profesional/tree/main/proyectos/01-data-analytics-bi/aab-Analisis-de-embudo-experimento"
+          }
+        ]
       }
     }
   },
