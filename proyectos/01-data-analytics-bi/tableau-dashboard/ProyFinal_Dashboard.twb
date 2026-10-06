@@ -1,0 +1,1967 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20262.26.0819.2015                               -->
+<workbook _.fcp.WorkbookFingerprinting.true...author-id='6bb6ebadeacb435e454c632c94457498cc0e7ae96a9ecd3084d11f762d8df33d' _.fcp.WorkbookFingerprinting.true...creator-author-id='6bb6ebadeacb435e454c632c94457498cc0e7ae96a9ecd3084d11f762d8df33d' _.fcp.WorkbookFingerprinting.true...creator-license-type='public' _.fcp.WorkbookFingerprinting.true...creator-machine-id='f08c76b0c652307e9c69bc1b0dba2b9f5d9ad68f92e032803c63b9c3afeae545' _.fcp.WorkbookFingerprinting.true...license-type='public' _.fcp.WorkbookFingerprinting.true...machine-id='f08c76b0c652307e9c69bc1b0dba2b9f5d9ad68f92e032803c63b9c3afeae545' original-version='18.1' source-build='2026.2.2 (20262.26.0819.2015)' source-platform='win' version='18.1' xml:base='https://public.tableau.com' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <AccessibleZoneTabOrder />
+    <AnimationOnByDefault />
+    <AutoCreateAndUpdateDSDPhoneLayouts />
+    <IntuitiveSorting />
+    <IntuitiveSorting_SP2 />
+    <MarkAnimation />
+    <ObjectModelEncapsulateLegacy />
+    <ObjectModelExtractV2 />
+    <ObjectModelTableType />
+    <SchemaViewerObjectModel />
+    <SetMembershipControl />
+    <SheetIdentifierTracking />
+    <VConnDownstreamExtractsWithWarnings />
+    <WindowsPersistSimpleIdentifiers />
+    <_.fcp.WorkbookFingerprinting.true...WorkbookFingerprinting />
+  </document-format-change-manifest>
+  <repository-location id='ProyFinal_Dashboard' path='/workbooks' revision='1.0' />
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource caption='daily_calls_tableau' inline='true' name='federated.1lax9pu1igkiiz17vru4b0is6tfm' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='daily_calls_tableau' name='textscan.1u6dom61io6frh1dupwdl1etizkh'>
+            <connection class='textscan' directory='D:/Oswaldo/Documents/Cursos/2026/TripleTen/Proyecto Final/3- dashboard en Tableau Public' filename='daily_calls_tableau.csv' server='' workgroup-auth-mode='as-is' />
+          </named-connection>
+        </named-connections>
+        <relation type='collection'>
+          <relation connection='textscan.1u6dom61io6frh1dupwdl1etizkh' name='daily_calls_tableau.csv' table='[daily_calls_tableau#csv]' type='table'>
+            <columns character-set='UTF-8' header='yes' locale='es_PE' separator=','>
+              <column datatype='date' name='day' ordinal='0' />
+              <column datatype='string' name='direction' ordinal='1' />
+              <column datatype='integer' name='calls_count' ordinal='2' />
+              <column datatype='integer' name='rows' ordinal='3' />
+            </columns>
+          </relation>
+          <relation connection='textscan.1u6dom61io6frh1dupwdl1etizkh' name='internal_external_tableau.csv' table='[internal_external_tableau#csv]' type='table'>
+            <columns character-set='UTF-8' header='yes' locale='es_PE' separator=','>
+              <column datatype='string' name='call_type' ordinal='0' />
+              <column datatype='integer' name='calls_count' ordinal='1' />
+            </columns>
+          </relation>
+        </relation>
+        <cols>
+          <map key='[call_type]' value='[internal_external_tableau.csv].[call_type]' />
+          <map key='[calls_count (internal_external_tableau.csv)]' value='[internal_external_tableau.csv].[calls_count]' />
+          <map key='[calls_count]' value='[daily_calls_tableau.csv].[calls_count]' />
+          <map key='[day]' value='[daily_calls_tableau.csv].[day]' />
+          <map key='[direction]' value='[daily_calls_tableau.csv].[direction]' />
+          <map key='[rows]' value='[daily_calls_tableau.csv].[rows]' />
+        </cols>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[daily_calls_tableau.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;es&quot;</attribute>
+              <attribute datatype='string' name='currency'>&quot;S/&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;es_PE&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[internal_external_tableau.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;es&quot;</attribute>
+              <attribute datatype='string' name='currency'>&quot;S/&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;es_PE&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>day</remote-name>
+            <remote-type>133</remote-type>
+            <local-name>[day]</local-name>
+            <parent-name>[daily_calls_tableau.csv]</parent-name>
+            <remote-alias>day</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[daily_calls_tableau.csv_5062E6BF82BF467494B0B006F30AD8BA]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>direction</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[direction]</local-name>
+            <parent-name>[daily_calls_tableau.csv]</parent-name>
+            <remote-alias>direction</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LES_RES' />
+            <object-id>[daily_calls_tableau.csv_5062E6BF82BF467494B0B006F30AD8BA]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>calls_count</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[calls_count]</local-name>
+            <parent-name>[daily_calls_tableau.csv]</parent-name>
+            <remote-alias>calls_count</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[daily_calls_tableau.csv_5062E6BF82BF467494B0B006F30AD8BA]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>rows</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[rows]</local-name>
+            <parent-name>[daily_calls_tableau.csv]</parent-name>
+            <remote-alias>rows</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[daily_calls_tableau.csv_5062E6BF82BF467494B0B006F30AD8BA]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>call_type</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[call_type]</local-name>
+            <parent-name>[internal_external_tableau.csv]</parent-name>
+            <remote-alias>call_type</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LES_RES' />
+            <object-id>[internal_external_tableau.csv_EB13766750DE44F899189EAD71BD56A3]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>calls_count</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[calls_count (internal_external_tableau.csv)]</local-name>
+            <parent-name>[internal_external_tableau.csv]</parent-name>
+            <remote-alias>calls_count</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[internal_external_tableau.csv_EB13766750DE44F899189EAD71BD56A3]</object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='daily_calls_tableau.csv' datatype='table' name='[__tableau_internal_object_id__].[daily_calls_tableau.csv_5062E6BF82BF467494B0B006F30AD8BA]' role='measure' type='quantitative' />
+      <column caption='internal_external_tableau.csv' datatype='table' name='[__tableau_internal_object_id__].[internal_external_tableau.csv_EB13766750DE44F899189EAD71BD56A3]' role='measure' type='quantitative' />
+      <column caption='Call Type' datatype='string' name='[call_type]' role='dimension' type='nominal' />
+      <column caption='Calls Count (Internal External Tableau.Csv)' datatype='integer' name='[calls_count (internal_external_tableau.csv)]' role='measure' type='quantitative' />
+      <column caption='Calls Count' datatype='integer' name='[calls_count]' role='measure' type='quantitative' />
+      <column caption='Day' datatype='date' name='[day]' role='dimension' type='ordinal' />
+      <column caption='Direction' datatype='string' name='[direction]' role='dimension' type='nominal' />
+      <column caption='Rows' datatype='integer' name='[rows]' role='measure' type='quantitative' />
+      <column-instance column='[call_type]' derivation='None' name='[none:call_type:nk]' pivot='key' type='nominal' />
+      <extract count='-1' enabled='true' object-id='' units='records' user-specific='false'>
+        <connection access_mode='readonly' author-locale='es_ES' class='hyper' dbname='D:/Oswaldo/Documents/Cursos/2026/TripleTen/Proyecto Final/3- dashboard en Tableau Public/ProyFinal_Dashboard.twb archivos/Data/TableauTemp/#TableauTemp_02c0os40lrcedt1chhxms0luh6m1.hyper' default-settings='hyper' schema='Extract' sslmode='' tablename='Extract' update-time='09/21/2026 11:48:17 PM' username='tableau_internal_user'>
+          <relation type='collection'>
+            <relation name='daily_calls_tableau.csv_5062E6BF82BF467494B0B006F30AD8BA' table='[Extract].[daily_calls_tableau.csv_5062E6BF82BF467494B0B006F30AD8BA]' type='table' />
+            <relation name='internal_external_tableau.csv_EB13766750DE44F899189EAD71BD56A3' table='[Extract].[internal_external_tableau.csv_EB13766750DE44F899189EAD71BD56A3]' type='table' />
+          </relation>
+          <cols>
+            <map key='[call_type]' value='[internal_external_tableau.csv_EB13766750DE44F899189EAD71BD56A3].[call_type]' />
+            <map key='[calls_count (internal_external_tableau.csv)]' value='[internal_external_tableau.csv_EB13766750DE44F899189EAD71BD56A3].[calls_count]' />
+            <map key='[calls_count]' value='[daily_calls_tableau.csv_5062E6BF82BF467494B0B006F30AD8BA].[calls_count]' />
+            <map key='[day]' value='[daily_calls_tableau.csv_5062E6BF82BF467494B0B006F30AD8BA].[day]' />
+            <map key='[direction]' value='[daily_calls_tableau.csv_5062E6BF82BF467494B0B006F30AD8BA].[direction]' />
+            <map key='[rows]' value='[daily_calls_tableau.csv_5062E6BF82BF467494B0B006F30AD8BA].[rows]' />
+          </cols>
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>day</remote-name>
+              <remote-type>133</remote-type>
+              <local-name>[day]</local-name>
+              <parent-name>[daily_calls_tableau.csv_5062E6BF82BF467494B0B006F30AD8BA]</parent-name>
+              <remote-alias>day</remote-alias>
+              <ordinal>0</ordinal>
+              <family>daily_calls_tableau.csv</family>
+              <local-type>date</local-type>
+              <aggregation>Year</aggregation>
+              <approx-count>119</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[daily_calls_tableau.csv_5062E6BF82BF467494B0B006F30AD8BA]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>direction</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[direction]</local-name>
+              <parent-name>[daily_calls_tableau.csv_5062E6BF82BF467494B0B006F30AD8BA]</parent-name>
+              <remote-alias>direction</remote-alias>
+              <ordinal>1</ordinal>
+              <family>daily_calls_tableau.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LES_RES' />
+              <object-id>[daily_calls_tableau.csv_5062E6BF82BF467494B0B006F30AD8BA]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>calls_count</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[calls_count]</local-name>
+              <parent-name>[daily_calls_tableau.csv_5062E6BF82BF467494B0B006F30AD8BA]</parent-name>
+              <remote-alias>calls_count</remote-alias>
+              <ordinal>2</ordinal>
+              <family>daily_calls_tableau.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>231</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[daily_calls_tableau.csv_5062E6BF82BF467494B0B006F30AD8BA]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>rows</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[rows]</local-name>
+              <parent-name>[daily_calls_tableau.csv_5062E6BF82BF467494B0B006F30AD8BA]</parent-name>
+              <remote-alias>rows</remote-alias>
+              <ordinal>3</ordinal>
+              <family>daily_calls_tableau.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>188</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[daily_calls_tableau.csv_5062E6BF82BF467494B0B006F30AD8BA]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>call_type</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[call_type]</local-name>
+              <parent-name>[internal_external_tableau.csv_EB13766750DE44F899189EAD71BD56A3]</parent-name>
+              <remote-alias>call_type</remote-alias>
+              <ordinal>4</ordinal>
+              <family>internal_external_tableau.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>3</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LES_RES' />
+              <object-id>[internal_external_tableau.csv_EB13766750DE44F899189EAD71BD56A3]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>calls_count</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[calls_count (internal_external_tableau.csv)]</local-name>
+              <parent-name>[internal_external_tableau.csv_EB13766750DE44F899189EAD71BD56A3]</parent-name>
+              <remote-alias>calls_count</remote-alias>
+              <ordinal>5</ordinal>
+              <family>internal_external_tableau.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>3</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[internal_external_tableau.csv_EB13766750DE44F899189EAD71BD56A3]</object-id>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[none:call_type:nk]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>&quot;External&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Unknown&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Internal&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;Perú&quot;' />
+      </semantic-values>
+      <object-graph>
+        <objects>
+          <object caption='daily_calls_tableau.csv' id='daily_calls_tableau.csv_5062E6BF82BF467494B0B006F30AD8BA'>
+            <properties context=''>
+              <relation connection='textscan.1u6dom61io6frh1dupwdl1etizkh' name='daily_calls_tableau.csv' table='[daily_calls_tableau#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='es_PE' separator=','>
+                  <column datatype='date' name='day' ordinal='0' />
+                  <column datatype='string' name='direction' ordinal='1' />
+                  <column datatype='integer' name='calls_count' ordinal='2' />
+                  <column datatype='integer' name='rows' ordinal='3' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='daily_calls_tableau.csv_5062E6BF82BF467494B0B006F30AD8BA' table='[Extract].[daily_calls_tableau.csv_5062E6BF82BF467494B0B006F30AD8BA]' type='table' />
+            </properties>
+          </object>
+          <object caption='internal_external_tableau.csv' id='internal_external_tableau.csv_EB13766750DE44F899189EAD71BD56A3'>
+            <properties context=''>
+              <relation connection='textscan.1u6dom61io6frh1dupwdl1etizkh' name='internal_external_tableau.csv' table='[internal_external_tableau#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='es_PE' separator=','>
+                  <column datatype='string' name='call_type' ordinal='0' />
+                  <column datatype='integer' name='calls_count' ordinal='1' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='internal_external_tableau.csv_EB13766750DE44F899189EAD71BD56A3' table='[Extract].[internal_external_tableau.csv_EB13766750DE44F899189EAD71BD56A3]' type='table' />
+            </properties>
+          </object>
+        </objects>
+        <relationships>
+          <relationship>
+            <expression op='='>
+              <expression op='[calls_count]' />
+              <expression op='[calls_count (internal_external_tableau.csv)]' />
+            </expression>
+            <first-end-point object-id='daily_calls_tableau.csv_5062E6BF82BF467494B0B006F30AD8BA' />
+            <second-end-point object-id='internal_external_tableau.csv_EB13766750DE44F899189EAD71BD56A3' />
+          </relationship>
+        </relationships>
+      </object-graph>
+    </datasource>
+    <datasource caption='operator_metrics_tableau' inline='true' name='federated.0a3shcc0yo7k2a123w3x20ab452z' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='operator_metrics_tableau' name='textscan.1144li70xc0swt19vz14z0rpmr6z'>
+            <connection class='textscan' directory='D:/Oswaldo/Documents/Cursos/2026/TripleTen/Proyecto Final/3- dashboard en Tableau Public' filename='operator_metrics_tableau.csv' server='' workgroup-auth-mode='as-is' />
+          </named-connection>
+        </named-connections>
+        <relation connection='textscan.1144li70xc0swt19vz14z0rpmr6z' name='operator_metrics_tableau.csv' table='[operator_metrics_tableau#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='es_PE' separator=','>
+            <column datatype='integer' name='operator_id' ordinal='0' />
+            <column datatype='integer' name='user_id' ordinal='1' />
+            <column datatype='string' name='tariff_plan' ordinal='2' />
+            <column datatype='integer' name='incoming_calls' ordinal='3' />
+            <column datatype='integer' name='missed_incoming_calls' ordinal='4' />
+            <column datatype='real' name='missed_incoming_rate' ordinal='5' />
+            <column datatype='real' name='avg_wait_seconds' ordinal='6' />
+            <column datatype='integer' name='outgoing_calls' ordinal='7' />
+            <column datatype='integer' name='total_calls' ordinal='8' />
+            <column datatype='boolean' name='high_missed' ordinal='9' />
+            <column datatype='boolean' name='high_wait' ordinal='10' />
+            <column datatype='boolean' name='low_outgoing' ordinal='11' />
+            <column datatype='integer' name='inefficiency_criteria' ordinal='12' />
+            <column datatype='boolean' name='ineffective' ordinal='13' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[operator_metrics_tableau.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;es&quot;</attribute>
+              <attribute datatype='string' name='currency'>&quot;S/&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;es_PE&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>operator_id</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[operator_id]</local-name>
+            <parent-name>[operator_metrics_tableau.csv]</parent-name>
+            <remote-alias>operator_id</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[operator_metrics_tableau.csv_805F588ACF074EC49104866FB116E52C]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>user_id</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[user_id]</local-name>
+            <parent-name>[operator_metrics_tableau.csv]</parent-name>
+            <remote-alias>user_id</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[operator_metrics_tableau.csv_805F588ACF074EC49104866FB116E52C]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>tariff_plan</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[tariff_plan]</local-name>
+            <parent-name>[operator_metrics_tableau.csv]</parent-name>
+            <remote-alias>tariff_plan</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LES_RES' />
+            <object-id>[operator_metrics_tableau.csv_805F588ACF074EC49104866FB116E52C]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>incoming_calls</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[incoming_calls]</local-name>
+            <parent-name>[operator_metrics_tableau.csv]</parent-name>
+            <remote-alias>incoming_calls</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[operator_metrics_tableau.csv_805F588ACF074EC49104866FB116E52C]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>missed_incoming_calls</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[missed_incoming_calls]</local-name>
+            <parent-name>[operator_metrics_tableau.csv]</parent-name>
+            <remote-alias>missed_incoming_calls</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[operator_metrics_tableau.csv_805F588ACF074EC49104866FB116E52C]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>missed_incoming_rate</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[missed_incoming_rate]</local-name>
+            <parent-name>[operator_metrics_tableau.csv]</parent-name>
+            <remote-alias>missed_incoming_rate</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[operator_metrics_tableau.csv_805F588ACF074EC49104866FB116E52C]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>avg_wait_seconds</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[avg_wait_seconds]</local-name>
+            <parent-name>[operator_metrics_tableau.csv]</parent-name>
+            <remote-alias>avg_wait_seconds</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[operator_metrics_tableau.csv_805F588ACF074EC49104866FB116E52C]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>outgoing_calls</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[outgoing_calls]</local-name>
+            <parent-name>[operator_metrics_tableau.csv]</parent-name>
+            <remote-alias>outgoing_calls</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[operator_metrics_tableau.csv_805F588ACF074EC49104866FB116E52C]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>total_calls</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[total_calls]</local-name>
+            <parent-name>[operator_metrics_tableau.csv]</parent-name>
+            <remote-alias>total_calls</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[operator_metrics_tableau.csv_805F588ACF074EC49104866FB116E52C]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>high_missed</remote-name>
+            <remote-type>11</remote-type>
+            <local-name>[high_missed]</local-name>
+            <parent-name>[operator_metrics_tableau.csv]</parent-name>
+            <remote-alias>high_missed</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>boolean</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[operator_metrics_tableau.csv_805F588ACF074EC49104866FB116E52C]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>high_wait</remote-name>
+            <remote-type>11</remote-type>
+            <local-name>[high_wait]</local-name>
+            <parent-name>[operator_metrics_tableau.csv]</parent-name>
+            <remote-alias>high_wait</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>boolean</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[operator_metrics_tableau.csv_805F588ACF074EC49104866FB116E52C]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>low_outgoing</remote-name>
+            <remote-type>11</remote-type>
+            <local-name>[low_outgoing]</local-name>
+            <parent-name>[operator_metrics_tableau.csv]</parent-name>
+            <remote-alias>low_outgoing</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>boolean</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[operator_metrics_tableau.csv_805F588ACF074EC49104866FB116E52C]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>inefficiency_criteria</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[inefficiency_criteria]</local-name>
+            <parent-name>[operator_metrics_tableau.csv]</parent-name>
+            <remote-alias>inefficiency_criteria</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[operator_metrics_tableau.csv_805F588ACF074EC49104866FB116E52C]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ineffective</remote-name>
+            <remote-type>11</remote-type>
+            <local-name>[ineffective]</local-name>
+            <parent-name>[operator_metrics_tableau.csv]</parent-name>
+            <remote-alias>ineffective</remote-alias>
+            <ordinal>13</ordinal>
+            <local-type>boolean</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[operator_metrics_tableau.csv_805F588ACF074EC49104866FB116E52C]</object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='operator_metrics_tableau.csv' datatype='table' name='[__tableau_internal_object_id__].[operator_metrics_tableau.csv_805F588ACF074EC49104866FB116E52C]' role='measure' type='quantitative' />
+      <column caption='Avg Wait Seconds' datatype='real' name='[avg_wait_seconds]' role='measure' type='quantitative' />
+      <column caption='High Missed' datatype='boolean' name='[high_missed]' role='dimension' type='nominal' />
+      <column caption='High Wait' datatype='boolean' name='[high_wait]' role='dimension' type='nominal' />
+      <column caption='Incoming Calls' datatype='integer' name='[incoming_calls]' role='measure' type='quantitative' />
+      <column caption='Ineffective' datatype='boolean' name='[ineffective]' role='dimension' type='nominal' />
+      <column caption='Inefficiency Criteria' datatype='integer' name='[inefficiency_criteria]' role='measure' type='quantitative' />
+      <column caption='Low Outgoing' datatype='boolean' name='[low_outgoing]' role='dimension' type='nominal' />
+      <column caption='Missed Incoming Calls' datatype='integer' name='[missed_incoming_calls]' role='measure' type='quantitative' />
+      <column caption='Missed Incoming Rate' datatype='real' name='[missed_incoming_rate]' role='measure' type='quantitative' />
+      <column caption='Operator Id' datatype='integer' name='[operator_id]' role='dimension' type='ordinal' />
+      <column caption='Outgoing Calls' datatype='integer' name='[outgoing_calls]' role='measure' type='quantitative' />
+      <column caption='Tariff Plan' datatype='string' name='[tariff_plan]' role='dimension' type='nominal' />
+      <column caption='Total Calls' datatype='integer' name='[total_calls]' role='measure' type='quantitative' />
+      <column caption='User Id' datatype='integer' name='[user_id]' role='dimension' type='ordinal' />
+      <extract count='-1' enabled='true' object-id='' units='records' user-specific='false'>
+        <connection access_mode='readonly' author-locale='es_ES' class='hyper' dbname='D:/Oswaldo/Documents/Cursos/2026/TripleTen/Proyecto Final/3- dashboard en Tableau Public/ProyFinal_Dashboard.twb archivos/Data/TableauTemp/#TableauTemp_17f8zwz0xjiiu81au3dz71ws0s21.hyper' default-settings='hyper' schema='Extract' sslmode='' tablename='Extract' update-time='09/21/2026 11:48:34 PM' username='tableau_internal_user'>
+          <relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>operator_id</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[operator_id]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>operator_id</remote-alias>
+              <ordinal>0</ordinal>
+              <family>operator_metrics_tableau.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>1092</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[operator_metrics_tableau.csv_805F588ACF074EC49104866FB116E52C]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>user_id</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[user_id]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>user_id</remote-alias>
+              <ordinal>1</ordinal>
+              <family>operator_metrics_tableau.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>282</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[operator_metrics_tableau.csv_805F588ACF074EC49104866FB116E52C]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>tariff_plan</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[tariff_plan]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>tariff_plan</remote-alias>
+              <ordinal>2</ordinal>
+              <family>operator_metrics_tableau.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>3</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LES_RES' />
+              <object-id>[operator_metrics_tableau.csv_805F588ACF074EC49104866FB116E52C]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>incoming_calls</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[incoming_calls]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>incoming_calls</remote-alias>
+              <ordinal>3</ordinal>
+              <family>operator_metrics_tableau.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>232</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[operator_metrics_tableau.csv_805F588ACF074EC49104866FB116E52C]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>missed_incoming_calls</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[missed_incoming_calls]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>missed_incoming_calls</remote-alias>
+              <ordinal>4</ordinal>
+              <family>operator_metrics_tableau.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>24</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[operator_metrics_tableau.csv_805F588ACF074EC49104866FB116E52C]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>missed_incoming_rate</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[missed_incoming_rate]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>missed_incoming_rate</remote-alias>
+              <ordinal>5</ordinal>
+              <family>operator_metrics_tableau.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>189</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[operator_metrics_tableau.csv_805F588ACF074EC49104866FB116E52C]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>avg_wait_seconds</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[avg_wait_seconds]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>avg_wait_seconds</remote-alias>
+              <ordinal>6</ordinal>
+              <family>operator_metrics_tableau.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>584</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[operator_metrics_tableau.csv_805F588ACF074EC49104866FB116E52C]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>outgoing_calls</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[outgoing_calls]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>outgoing_calls</remote-alias>
+              <ordinal>7</ordinal>
+              <family>operator_metrics_tableau.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>467</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[operator_metrics_tableau.csv_805F588ACF074EC49104866FB116E52C]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>total_calls</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[total_calls]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>total_calls</remote-alias>
+              <ordinal>8</ordinal>
+              <family>operator_metrics_tableau.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>520</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[operator_metrics_tableau.csv_805F588ACF074EC49104866FB116E52C]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>high_missed</remote-name>
+              <remote-type>11</remote-type>
+              <local-name>[high_missed]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>high_missed</remote-alias>
+              <ordinal>9</ordinal>
+              <family>operator_metrics_tableau.csv</family>
+              <local-type>boolean</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[operator_metrics_tableau.csv_805F588ACF074EC49104866FB116E52C]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>high_wait</remote-name>
+              <remote-type>11</remote-type>
+              <local-name>[high_wait]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>high_wait</remote-alias>
+              <ordinal>10</ordinal>
+              <family>operator_metrics_tableau.csv</family>
+              <local-type>boolean</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[operator_metrics_tableau.csv_805F588ACF074EC49104866FB116E52C]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>low_outgoing</remote-name>
+              <remote-type>11</remote-type>
+              <local-name>[low_outgoing]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>low_outgoing</remote-alias>
+              <ordinal>11</ordinal>
+              <family>operator_metrics_tableau.csv</family>
+              <local-type>boolean</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[operator_metrics_tableau.csv_805F588ACF074EC49104866FB116E52C]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>inefficiency_criteria</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[inefficiency_criteria]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>inefficiency_criteria</remote-alias>
+              <ordinal>12</ordinal>
+              <family>operator_metrics_tableau.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>4</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[operator_metrics_tableau.csv_805F588ACF074EC49104866FB116E52C]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>ineffective</remote-name>
+              <remote-type>11</remote-type>
+              <local-name>[ineffective]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>ineffective</remote-alias>
+              <ordinal>13</ordinal>
+              <family>operator_metrics_tableau.csv</family>
+              <local-type>boolean</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[operator_metrics_tableau.csv_805F588ACF074EC49104866FB116E52C]</object-id>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;Perú&quot;' />
+      </semantic-values>
+      <object-graph>
+        <objects>
+          <object caption='operator_metrics_tableau.csv' id='operator_metrics_tableau.csv_805F588ACF074EC49104866FB116E52C'>
+            <properties context=''>
+              <relation connection='textscan.1144li70xc0swt19vz14z0rpmr6z' name='operator_metrics_tableau.csv' table='[operator_metrics_tableau#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='es_PE' separator=','>
+                  <column datatype='integer' name='operator_id' ordinal='0' />
+                  <column datatype='integer' name='user_id' ordinal='1' />
+                  <column datatype='string' name='tariff_plan' ordinal='2' />
+                  <column datatype='integer' name='incoming_calls' ordinal='3' />
+                  <column datatype='integer' name='missed_incoming_calls' ordinal='4' />
+                  <column datatype='real' name='missed_incoming_rate' ordinal='5' />
+                  <column datatype='real' name='avg_wait_seconds' ordinal='6' />
+                  <column datatype='integer' name='outgoing_calls' ordinal='7' />
+                  <column datatype='integer' name='total_calls' ordinal='8' />
+                  <column datatype='boolean' name='high_missed' ordinal='9' />
+                  <column datatype='boolean' name='high_wait' ordinal='10' />
+                  <column datatype='boolean' name='low_outgoing' ordinal='11' />
+                  <column datatype='integer' name='inefficiency_criteria' ordinal='12' />
+                  <column datatype='boolean' name='ineffective' ordinal='13' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='Extract' table='[Extract].[Extract]' type='table' />
+            </properties>
+          </object>
+        </objects>
+      </object-graph>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='Llamadas internas vs externas'>
+      <repository-location id='Llamadasinternasvsexternas' path='/workbooks/ProyFinal_Dashboard' revision='' />
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='daily_calls_tableau' name='federated.1lax9pu1igkiiz17vru4b0is6tfm' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1lax9pu1igkiiz17vru4b0is6tfm'>
+            <column caption='Call Type' datatype='string' name='[call_type]' role='dimension' type='nominal' />
+            <column caption='Calls Count (Internal External Tableau.Csv)' datatype='integer' name='[calls_count (internal_external_tableau.csv)]' role='measure' type='quantitative' />
+            <column-instance column='[call_type]' derivation='None' name='[none:call_type:nk]' pivot='key' type='nominal' />
+            <column-instance column='[calls_count (internal_external_tableau.csv)]' derivation='Sum' name='[pcto:sum:calls_count (internal_external_tableau.csv):qk]' pivot='key' type='quantitative'>
+              <table-calc ordering-type='Rows' type='PctTotal' />
+            </column-instance>
+            <column-instance column='[calls_count (internal_external_tableau.csv)]' derivation='Sum' name='[sum:calls_count (internal_external_tableau.csv):qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1lax9pu1igkiiz17vru4b0is6tfm].[none:call_type:nk]'>
+            <groupfilter function='union' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+              <groupfilter function='member' level='[none:call_type:nk]' member='&quot;External&quot;' />
+              <groupfilter function='member' level='[none:call_type:nk]' member='&quot;Internal&quot;' />
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.1lax9pu1igkiiz17vru4b0is6tfm].[none:call_type:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Pie' />
+            <encodings>
+              <color column='[federated.1lax9pu1igkiiz17vru4b0is6tfm].[none:call_type:nk]' />
+              <size column='[federated.1lax9pu1igkiiz17vru4b0is6tfm].[sum:calls_count (internal_external_tableau.csv):qk]' />
+              <wedge-size column='[federated.1lax9pu1igkiiz17vru4b0is6tfm].[sum:calls_count (internal_external_tableau.csv):qk]' />
+              <text column='[federated.1lax9pu1igkiiz17vru4b0is6tfm].[pcto:sum:calls_count (internal_external_tableau.csv):qk]' />
+              <text column='[federated.1lax9pu1igkiiz17vru4b0is6tfm].[none:call_type:nk]' />
+            </encodings>
+            <customized-label>
+              <formatted-text>
+                <run fontalignment='0' fontname='Benton Sans Book'>&lt;</run>
+                <run fontalignment='0' fontname='Benton Sans Book'>[federated.1lax9pu1igkiiz17vru4b0is6tfm].[pcto:sum:calls_count (internal_external_tableau.csv):qk]</run>
+                <run fontalignment='0' fontname='Benton Sans Book'>&gt;</run>
+              </formatted-text>
+            </customized-label>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{65200CA9-7D07-4F96-B9CA-01D4EACA86FB}' />
+    </worksheet>
+    <worksheet name='Llamadas por día'>
+      <repository-location id='Llamadasporda' path='/workbooks/ProyFinal_Dashboard' revision='' />
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='daily_calls_tableau' name='federated.1lax9pu1igkiiz17vru4b0is6tfm' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1lax9pu1igkiiz17vru4b0is6tfm'>
+            <column caption='Calls Count' datatype='integer' name='[calls_count]' role='measure' type='quantitative' />
+            <column caption='Day' datatype='date' name='[day]' role='dimension' type='ordinal' />
+            <column caption='Direction' datatype='string' name='[direction]' role='dimension' type='nominal' />
+            <column-instance column='[day]' derivation='Day' name='[dy:day:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[direction]' derivation='None' name='[none:direction:nk]' pivot='key' type='nominal' />
+            <column-instance column='[calls_count]' derivation='Sum' name='[sum:calls_count:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+            <encodings>
+              <color column='[federated.1lax9pu1igkiiz17vru4b0is6tfm].[none:direction:nk]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[federated.1lax9pu1igkiiz17vru4b0is6tfm].[sum:calls_count:qk]</rows>
+        <cols>[federated.1lax9pu1igkiiz17vru4b0is6tfm].[dy:day:ok]</cols>
+      </table>
+      <simple-id uuid='{C81017C2-FDCE-447F-892C-D0076137031A}' />
+    </worksheet>
+    <worksheet name='Operadores ineficaces - llamadas perdidas'>
+      <repository-location id='Operadoresineficaces-llamadasperdidas' path='/workbooks/ProyFinal_Dashboard' revision='' />
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='operator_metrics_tableau' name='federated.0a3shcc0yo7k2a123w3x20ab452z' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0a3shcc0yo7k2a123w3x20ab452z'>
+            <column caption='Ineffective' datatype='boolean' name='[ineffective]' role='dimension' type='nominal' />
+            <column caption='Missed Incoming Calls' datatype='integer' name='[missed_incoming_calls]' role='measure' type='quantitative' />
+            <column-instance column='[ineffective]' derivation='None' name='[none:ineffective:nk]' pivot='key' type='nominal' />
+            <column-instance column='[operator_id]' derivation='None' name='[none:operator_id:ok]' pivot='key' type='ordinal' />
+            <column caption='Operator Id' datatype='integer' name='[operator_id]' role='dimension' type='ordinal' />
+            <column-instance column='[missed_incoming_calls]' derivation='Sum' name='[sum:missed_incoming_calls:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0a3shcc0yo7k2a123w3x20ab452z].[none:ineffective:nk]' context='true'>
+            <groupfilter function='member' level='[none:ineffective:nk]' member='true' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.0a3shcc0yo7k2a123w3x20ab452z].[none:operator_id:ok]'>
+            <groupfilter count='10' end='top' function='end' units='records' user:ui-marker='end' user:ui-top-by-field='true'>
+              <groupfilter direction='DESC' expression='SUM([missed_incoming_calls])' function='order' user:ui-marker='order'>
+                <groupfilter function='level-members' level='[none:operator_id:ok]' user:ui-manual-selection='true' user:ui-manual-selection-all-when-empty='true' user:ui-manual-selection-is-empty='true' user:ui-marker='enumerate' />
+              </groupfilter>
+            </groupfilter>
+          </filter>
+          <shelf-sorts>
+            <shelf-sort-v2 dimension-to-sort='[federated.0a3shcc0yo7k2a123w3x20ab452z].[none:operator_id:ok]' direction='DESC' is-on-innermost-dimension='true' measure-to-sort-by='[federated.0a3shcc0yo7k2a123w3x20ab452z].[none:operator_id:ok]' shelf='rows' />
+          </shelf-sorts>
+          <slices>
+            <column>[federated.0a3shcc0yo7k2a123w3x20ab452z].[none:ineffective:nk]</column>
+            <column>[federated.0a3shcc0yo7k2a123w3x20ab452z].[none:operator_id:ok]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0a3shcc0yo7k2a123w3x20ab452z].[none:operator_id:ok]</rows>
+        <cols>[federated.0a3shcc0yo7k2a123w3x20ab452z].[sum:missed_incoming_calls:qk]</cols>
+      </table>
+      <simple-id uuid='{87711981-D594-4863-8349-535217669A8F}' />
+    </worksheet>
+    <worksheet name='Top 10 - llamadas salientes'>
+      <repository-location id='Top10-llamadassalientes' path='/workbooks/ProyFinal_Dashboard' revision='' />
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='operator_metrics_tableau' name='federated.0a3shcc0yo7k2a123w3x20ab452z' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0a3shcc0yo7k2a123w3x20ab452z'>
+            <column caption='Ineffective' datatype='boolean' name='[ineffective]' role='dimension' type='nominal' />
+            <column-instance column='[ineffective]' derivation='None' name='[none:ineffective:nk]' pivot='key' type='nominal' />
+            <column-instance column='[operator_id]' derivation='None' name='[none:operator_id:ok]' pivot='key' type='ordinal' />
+            <column caption='Operator Id' datatype='integer' name='[operator_id]' role='dimension' type='ordinal' />
+            <column caption='Outgoing Calls' datatype='integer' name='[outgoing_calls]' role='measure' type='quantitative' />
+            <column-instance column='[outgoing_calls]' derivation='Sum' name='[sum:outgoing_calls:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0a3shcc0yo7k2a123w3x20ab452z].[none:ineffective:nk]' context='true'>
+            <groupfilter function='member' level='[none:ineffective:nk]' member='true' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.0a3shcc0yo7k2a123w3x20ab452z].[none:operator_id:ok]'>
+            <groupfilter count='10' end='top' function='end' units='records' user:ui-marker='end' user:ui-top-by-field='true'>
+              <groupfilter direction='DESC' expression='SUM([outgoing_calls])' function='order' user:ui-marker='order'>
+                <groupfilter function='level-members' level='[none:operator_id:ok]' user:ui-manual-selection='true' user:ui-manual-selection-all-when-empty='true' user:ui-manual-selection-is-empty='true' user:ui-marker='enumerate' />
+              </groupfilter>
+            </groupfilter>
+          </filter>
+          <shelf-sorts>
+            <shelf-sort-v2 dimension-to-sort='[federated.0a3shcc0yo7k2a123w3x20ab452z].[none:operator_id:ok]' direction='DESC' is-on-innermost-dimension='true' measure-to-sort-by='[federated.0a3shcc0yo7k2a123w3x20ab452z].[none:operator_id:ok]' shelf='rows' />
+          </shelf-sorts>
+          <slices>
+            <column>[federated.0a3shcc0yo7k2a123w3x20ab452z].[none:ineffective:nk]</column>
+            <column>[federated.0a3shcc0yo7k2a123w3x20ab452z].[none:operator_id:ok]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane id='1' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0a3shcc0yo7k2a123w3x20ab452z].[none:operator_id:ok]</rows>
+        <cols>[federated.0a3shcc0yo7k2a123w3x20ab452z].[sum:outgoing_calls:qk]</cols>
+      </table>
+      <simple-id uuid='{0F03A38B-F8B1-4EF2-B288-57A6DBEC457E}' />
+    </worksheet>
+    <worksheet name='Top 10 - mayor tiempo de espera'>
+      <repository-location id='Top10-mayortiempodeespera' path='/workbooks/ProyFinal_Dashboard' revision='' />
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='operator_metrics_tableau' name='federated.0a3shcc0yo7k2a123w3x20ab452z' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0a3shcc0yo7k2a123w3x20ab452z'>
+            <column caption='Avg Wait Seconds' datatype='real' name='[avg_wait_seconds]' role='measure' type='quantitative' />
+            <column caption='Ineffective' datatype='boolean' name='[ineffective]' role='dimension' type='nominal' />
+            <column-instance column='[ineffective]' derivation='None' name='[none:ineffective:nk]' pivot='key' type='nominal' />
+            <column-instance column='[operator_id]' derivation='None' name='[none:operator_id:ok]' pivot='key' type='ordinal' />
+            <column caption='Operator Id' datatype='integer' name='[operator_id]' role='dimension' type='ordinal' />
+            <column-instance column='[avg_wait_seconds]' derivation='Sum' name='[sum:avg_wait_seconds:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0a3shcc0yo7k2a123w3x20ab452z].[none:ineffective:nk]' context='true'>
+            <groupfilter function='member' level='[none:ineffective:nk]' member='true' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.0a3shcc0yo7k2a123w3x20ab452z].[none:operator_id:ok]'>
+            <groupfilter count='10' end='top' function='end' units='records' user:ui-marker='end' user:ui-top-by-field='true'>
+              <groupfilter direction='DESC' expression='SUM([avg_wait_seconds])' function='order' user:ui-marker='order'>
+                <groupfilter function='level-members' level='[none:operator_id:ok]' user:ui-manual-selection='true' user:ui-manual-selection-all-when-empty='true' user:ui-manual-selection-is-empty='true' user:ui-marker='enumerate' />
+              </groupfilter>
+            </groupfilter>
+          </filter>
+          <shelf-sorts>
+            <shelf-sort-v2 dimension-to-sort='[federated.0a3shcc0yo7k2a123w3x20ab452z].[none:operator_id:ok]' direction='DESC' is-on-innermost-dimension='true' measure-to-sort-by='[federated.0a3shcc0yo7k2a123w3x20ab452z].[none:operator_id:ok]' shelf='rows' />
+          </shelf-sorts>
+          <slices>
+            <column>[federated.0a3shcc0yo7k2a123w3x20ab452z].[none:ineffective:nk]</column>
+            <column>[federated.0a3shcc0yo7k2a123w3x20ab452z].[none:operator_id:ok]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane id='2' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0a3shcc0yo7k2a123w3x20ab452z].[none:operator_id:ok]</rows>
+        <cols>[federated.0a3shcc0yo7k2a123w3x20ab452z].[sum:avg_wait_seconds:qk]</cols>
+      </table>
+      <simple-id uuid='{62C3D90E-7C80-4092-805B-287521C9E779}' />
+    </worksheet>
+  </worksheets>
+  <dashboards>
+    <dashboard enable-sort-zone-taborder='true' name='Dashboard 1'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontcolor='#000000' fontname='Benton Sans Book'>Análisis de llamadas y rendimiento de operadores</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <repository-location id='Dashboard1' path='/workbooks/ProyFinal_Dashboard' revision='' />
+      <style />
+      <size sizing-mode='automatic' />
+      <zones>
+        <zone h='100000' id='4' type-v2='layout-basic' w='100000' x='0' y='0'>
+          <zone h='98108' id='18' param='vert' type-v2='layout-flow' w='99304' x='348' y='946'>
+            <zone h='5438' id='19' type-v2='title' w='99304' x='348' y='946'>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='4' />
+              </zone-style>
+            </zone>
+            <zone h='92670' id='7' param='horz' type-v2='layout-flow' w='99304' x='348' y='6384'>
+              <zone h='92670' id='5' type-v2='layout-basic' w='92338' x='348' y='6384'>
+                <zone h='46334' id='3' name='Llamadas por día' w='46169' x='348' y='6384'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                  </zone-style>
+                </zone>
+                <zone h='30592' id='9' name='Llamadas internas vs externas' w='46169' x='46517' y='6384'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                  </zone-style>
+                </zone>
+                <zone h='46336' id='12' name='Operadores ineficaces - llamadas perdidas' w='46169' x='348' y='52718'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                  </zone-style>
+                </zone>
+                <zone h='33494' id='13' name='Top 10 - mayor tiempo de espera' w='46169' x='46517' y='36976'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                  </zone-style>
+                </zone>
+                <zone h='28584' id='14' name='Top 10 - llamadas salientes' w='46169' x='46517' y='70470'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone fixed-size='160' h='92670' id='6' is-fixed='true' param='vert' type-v2='layout-flow' w='6966' x='92686' y='6384'>
+                <zone h='8511' id='8' name='Llamadas por día' pane-specification-id='0' param='[federated.1lax9pu1igkiiz17vru4b0is6tfm].[none:direction:nk]' type-v2='color' w='6966' x='92686' y='6384'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                  </zone-style>
+                </zone>
+                <zone h='8511' id='10' name='Llamadas internas vs externas' pane-specification-id='0' param='[federated.1lax9pu1igkiiz17vru4b0is6tfm].[none:call_type:nk]' type-v2='color' w='6966' x='92686' y='14895'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                  </zone-style>
+                </zone>
+                <zone h='6029' id='11' name='Llamadas internas vs externas' pane-specification-id='0' param='[federated.1lax9pu1igkiiz17vru4b0is6tfm].[sum:calls_count (internal_external_tableau.csv):qk]' type-v2='size' w='6966' x='92686' y='23406'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                  </zone-style>
+                </zone>
+              </zone>
+            </zone>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+      </zones>
+      <devicelayouts>
+        <devicelayout auto-generated='true' name='Phone'>
+          <layout-options>
+            <title>
+              <formatted-text>
+                <run fontcolor='#000000' fontname='Benton Sans Book'>Análisis de llamadas y rendimiento de operadores</run>
+              </formatted-text>
+            </title>
+          </layout-options>
+          <size maxheight='1600' minheight='1600' sizing-mode='vscroll' />
+          <zones>
+            <zone h='100000' id='27' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='98108' id='26' param='vert' type-v2='layout-flow' w='99304' x='348' y='946'>
+                <zone h='5438' id='19' type-v2='title' w='99304' x='348' y='946'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='46334' id='3' is-fixed='true' name='Llamadas por día' w='46169' x='348' y='6384'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='8511' id='8' name='Llamadas por día' pane-specification-id='0' param='[federated.1lax9pu1igkiiz17vru4b0is6tfm].[none:direction:nk]' type-v2='color' w='6966' x='92686' y='6384'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='237' h='30592' id='9' is-fixed='true' name='Llamadas internas vs externas' w='46169' x='46517' y='6384'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='8511' id='10' name='Llamadas internas vs externas' pane-specification-id='0' param='[federated.1lax9pu1igkiiz17vru4b0is6tfm].[none:call_type:nk]' type-v2='color' w='6966' x='92686' y='14895'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='6029' id='11' name='Llamadas internas vs externas' pane-specification-id='0' param='[federated.1lax9pu1igkiiz17vru4b0is6tfm].[sum:calls_count (internal_external_tableau.csv):qk]' type-v2='size' w='6966' x='92686' y='23406'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='260' h='33494' id='13' is-fixed='true' name='Top 10 - mayor tiempo de espera' w='46169' x='46517' y='36976'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='46336' id='12' is-fixed='true' name='Operadores ineficaces - llamadas perdidas' w='46169' x='348' y='52718'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='220' h='28584' id='14' is-fixed='true' name='Top 10 - llamadas salientes' w='46169' x='46517' y='70470'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='8' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{F7394495-405B-4896-9DAF-BF25464A7917}' />
+    </dashboard>
+  </dashboards>
+  <windows saved-dpi-scale-factor='1.25' source-height='63'>
+    <window class='worksheet' maximized='true' name='Llamadas por día'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='29'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='173'>
+            <card pane-specification-id='0' param='[federated.1lax9pu1igkiiz17vru4b0is6tfm].[none:direction:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.1lax9pu1igkiiz17vru4b0is6tfm].[dy:day:ok]</field>
+            <field>[federated.1lax9pu1igkiiz17vru4b0is6tfm].[none:direction:nk]</field>
+            <field>[federated.1lax9pu1igkiiz17vru4b0is6tfm].[yr:day:ok]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{71B2E7F5-D3F6-4370-A223-0FF34D9DE0FB}' />
+    </window>
+    <window class='worksheet' name='Llamadas internas vs externas'>
+      <cards>
+        <edge name='left'>
+          <strip size='300'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='29'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='173'>
+            <card param='[federated.1lax9pu1igkiiz17vru4b0is6tfm].[none:call_type:nk]' type='filter' />
+            <card pane-specification-id='0' param='[federated.1lax9pu1igkiiz17vru4b0is6tfm].[none:call_type:nk]' type='color' />
+            <card pane-specification-id='0' param='[federated.1lax9pu1igkiiz17vru4b0is6tfm].[sum:calls_count (internal_external_tableau.csv):qk]' type='size' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.1lax9pu1igkiiz17vru4b0is6tfm].[none:call_type:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{0C163141-4C2B-43EB-B360-E53E902AC2D2}' />
+    </window>
+    <window class='worksheet' name='Operadores ineficaces - llamadas perdidas'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='30'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.0a3shcc0yo7k2a123w3x20ab452z].[none:ineffective:nk]</field>
+            <field>[federated.0a3shcc0yo7k2a123w3x20ab452z].[none:operator_id:ok]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{1785B58F-ABF8-420E-A718-7507244EA2E1}' />
+    </window>
+    <window class='worksheet' name='Top 10 - mayor tiempo de espera'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='29'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.0a3shcc0yo7k2a123w3x20ab452z].[none:ineffective:nk]</field>
+            <field>[federated.0a3shcc0yo7k2a123w3x20ab452z].[none:operator_id:ok]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{68546A91-3D3F-407A-90A6-AE6102CB1A15}' />
+    </window>
+    <window class='worksheet' name='Top 10 - llamadas salientes'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='29'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.0a3shcc0yo7k2a123w3x20ab452z].[none:ineffective:nk]</field>
+            <field>[federated.0a3shcc0yo7k2a123w3x20ab452z].[none:operator_id:ok]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{957A93E2-56CB-4CCD-A7D9-BEAA124C08EE}' />
+    </window>
+    <window class='dashboard' name='Dashboard 1'>
+      <viewpoints>
+        <viewpoint name='Llamadas internas vs externas'>
+          <zoom type='entire-view' />
+          <highlight>
+            <color-one-way>
+              <field>[federated.1lax9pu1igkiiz17vru4b0is6tfm].[none:call_type:nk]</field>
+            </color-one-way>
+          </highlight>
+        </viewpoint>
+        <viewpoint name='Llamadas por día'>
+          <zoom type='entire-view' />
+          <highlight>
+            <color-one-way>
+              <field>[federated.1lax9pu1igkiiz17vru4b0is6tfm].[none:direction:nk]</field>
+            </color-one-way>
+          </highlight>
+        </viewpoint>
+        <viewpoint name='Operadores ineficaces - llamadas perdidas'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Top 10 - llamadas salientes'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Top 10 - mayor tiempo de espera'>
+          <zoom type='entire-view' />
+        </viewpoint>
+      </viewpoints>
+      <active id='10' />
+      <simple-id uuid='{FA627D72-9CB5-4C50-8CCA-D07E05EB8C7C}' />
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='192' name='Dashboard 1' width='192'>
+      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
+    </thumbnail>
+    <thumbnail height='164' name='Llamadas internas vs externas' width='164'>
+      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
+    </thumbnail>
+    <thumbnail height='192' name='Llamadas por día' width='192'>
+      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
+      IxgbHcH/AVz7sIJS6rQwAAAAAElFTkSuQmCC
+    </thumbnail>
+  </thumbnails>
+</workbook>
