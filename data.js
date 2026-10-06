@@ -12,12 +12,9 @@ const SITE = {
 
   email:
     "oswal_gomez@hotmail.com",
-
   cv:
     "#"
-
 };
-
 
 
 /* ==================================================
@@ -26,146 +23,88 @@ const SITE = {
 
 const PROJECTS = [
 
-
-
   /* ==================================================
      01. CALLMEMAYBE
   ================================================== */
 
   {
-
     id:
       "callmemaybe",
-
     title:
       "Análisis de operadores ineficaces",
-
     category:
       "data",
-
     categoryLabel:
       "Data Analytics",
-
     description:
       "Análisis de llamadas para identificar operadores con oportunidades de mejora mediante indicadores de llamadas perdidas, tiempo de espera y llamadas salientes.",
-
     tags: [
-
       "Python",
-
       "Pandas",
-
       "SciPy",
-
       "SQL",
-
       "Jupyter Notebook"
-
     ],
 
     featured:
       true,
-
-
     details: {
-
       objective:
         "Identificar operadores con oportunidades de mejora a partir de la información de llamadas, combinando indicadores de llamadas entrantes perdidas, tiempo de espera y volumen de llamadas salientes.",
-
-
       results: [
-
         "Se eliminaron 4,900 registros duplicados durante la limpieza de los datos.",
-
         "Después de la depuración se analizaron 49,002 registros de llamadas.",
-
         "El análisis consideró información de 1,092 operadores.",
-
         "Se identificaron 188 operadores para revisión por presentar al menos dos señales de ineficiencia.",
-
         "Los criterios combinaron llamadas entrantes perdidas, tiempo promedio de espera y volumen de llamadas salientes."
-
       ],
 
-
       evidence: {
-
         title:
           "Jupyter Notebook",
-
         type:
           ".ipynb",
-
-
         previewUrl:
-          "https://nbviewer.org/url/https://raw.githubusercontent.com/OswaldoGomezBellota/portafolio-profesional/main/proyectos/01-data-analytics-bi/telecomunicaciones/Proyecto_Final_Telecomunicaciones.ipynb",
-
-
+          "proyectos/01-data-analytics-bi/telecomunicaciones/Proyecto_Final_Telecomunicaciones.html",
         links: [
-
           {
-
             label:
-              "Abrir Notebook en GitHub",
-
-            url:
-              "https://github.com/OswaldoGomezBellota/portafolio-profesional/blob/main/proyectos/01-data-analytics-bi/telecomunicaciones/Proyecto_Final_Telecomunicaciones.ipynb"
-
+              "Abrir Notebook en GitHub",            
+            url: "https://github.com/OswaldoGomezBellota/portafolio-profesional/blob/main/proyectos/01-data-analytics-bi/telecomunicaciones/Proyecto_Final_Telecomunicaciones.ipynb"
           }
-
         ]
-
       }
-
     }
-
   },
-
-
 
   /* ==================================================
      02. SHOWZ
   ================================================== */
 
   {
-
     id:
       "showz",
-
     title:
       "Showz — Marketing Analytics",
-
     category:
       "data",
-
     categoryLabel:
       "Marketing Analytics",
-
     description:
       "Análisis de adquisición, conversión y rentabilidad de fuentes de marketing mediante métricas de producto, cohortes y rentabilidad.",
-
     tags: [
-
       "Python",
-
       "Pandas",
-
       "Cohortes",
-
       "CAC",
-
       "LTV",
-
       "ROMI"
-
     ],
 
     featured:
       true,
 
-
     details: {
-
       objective:
         "Evaluar el desempeño de adquisición, conversión y rentabilidad de las fuentes de marketing.",
 
