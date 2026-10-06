@@ -3,7 +3,6 @@
 =================================================== */
 
 function escapeHTML(value) {
-
   return String(value).replace(
     /[&<>"']/g,
     char => ({
@@ -14,9 +13,7 @@ function escapeHTML(value) {
       "'": "&#039;"
     }[char])
   );
-
 }
-
 
 
 /* ==================================================
@@ -28,17 +25,17 @@ function renderProjects(filter = "all") {
   const grid =
     document.getElementById("projectGrid");
 
+  if (!grid) {
+    return;
+  }
 
   const visible =
     PROJECTS.filter(project => {
-
       return (
         filter === "all" ||
         project.category === filter
       );
-
     });
-
 
   grid.innerHTML =
     visible.map((project, index) => `
@@ -48,13 +45,11 @@ function renderProjects(filter = "all") {
         ${project.featured ? "featured" : ""}"
       >
 
-
         <div class="project-top">
 
           <span>
             ${String(index + 1).padStart(2, "0")}
           </span>
-
 
           <span>
             ${escapeHTML(
@@ -64,20 +59,17 @@ function renderProjects(filter = "all") {
 
         </div>
 
-
         <h3>
           ${escapeHTML(
             project.title
           )}
         </h3>
 
-
         <p>
           ${escapeHTML(
             project.description
           )}
         </p>
-
 
         <div class="tags">
 
@@ -91,7 +83,6 @@ function renderProjects(filter = "all") {
 
         </div>
 
-
         <a
           href="#project-detail"
           class="project-link"
@@ -102,16 +93,12 @@ function renderProjects(filter = "all") {
           Ver proyecto →
         </a>
 
-
       </article>
 
     `).join("");
 
-
   attachProjectLinks();
-
 }
-
 
 
 /* ==================================================
@@ -125,45 +112,41 @@ function openProjectDetail(projectId) {
       item => item.id === projectId
     );
 
-
   if (!project) {
     return;
   }
-
 
   const projectsSection =
     document.getElementById(
       "proyectos"
     );
 
-
   const detailSection =
     document.getElementById(
       "project-detail"
     );
 
+  if (!projectsSection || !detailSection) {
+    return;
+  }
 
-  /*
-    INFORMACIÓN IZQUIERDA
-  */
+
+  /* INFORMACIÓN */
 
   document.getElementById(
     "projectDetailCategory"
   ).textContent =
     project.categoryLabel;
 
-
   document.getElementById(
     "projectDetailTitle"
   ).textContent =
     project.title;
 
-
   document.getElementById(
     "projectDetailDescription"
   ).textContent =
     project.description;
-
 
   document.getElementById(
     "projectDetailObjective"
@@ -172,20 +155,15 @@ function openProjectDetail(projectId) {
     "Información pendiente de documentar.";
 
 
-
-  /*
-    RESULTADOS
-  */
+  /* RESULTADOS */
 
   const results =
     project.details?.results || [];
-
 
   const resultsContainer =
     document.getElementById(
       "projectDetailResults"
     );
-
 
   if (results.length) {
 
@@ -216,10 +194,7 @@ function openProjectDetail(projectId) {
   }
 
 
-
-  /*
-    HERRAMIENTAS
-  */
+  /* HERRAMIENTAS */
 
   document.getElementById(
     "projectDetailTags"
@@ -234,32 +209,25 @@ function openProjectDetail(projectId) {
     `).join("");
 
 
-
-  /*
-    EVIDENCIA DERECHA
-  */
+  /* EVIDENCIA */
 
   const evidence =
     project.details?.evidence;
-
 
   const evidenceTitle =
     document.getElementById(
       "projectDetailEvidenceTitle"
     );
 
-
   const evidenceType =
     document.getElementById(
       "projectDetailEvidenceType"
     );
 
-
   const preview =
     document.getElementById(
       "projectDetailPreview"
     );
-
 
   const links =
     document.getElementById(
@@ -272,10 +240,8 @@ function openProjectDetail(projectId) {
     evidenceTitle.textContent =
       "Evidencia del proyecto";
 
-
     evidenceType.textContent =
       "PROYECTO";
-
 
     preview.innerHTML = `
 
@@ -298,7 +264,6 @@ function openProjectDetail(projectId) {
 
     `;
 
-
     links.innerHTML = "";
 
   } else {
@@ -307,53 +272,29 @@ function openProjectDetail(projectId) {
       evidence.title ||
       "Evidencia principal";
 
-
     evidenceType.textContent =
       evidence.type ||
       "PROYECTO";
 
 
-    /*
-      PREVIEW
-    */
+    if (evidence.previewUrl) {
 
-if (evidence.previewUrl) {
+      preview.innerHTML = `
 
-  const isImage =
-    /\.(png|jpg|jpeg|webp|gif)$/i.test(
-      evidence.previewUrl
-    );
-
-  if (isImage) {
-
-    preview.innerHTML = `
-      <div class="project-image-preview">
-        <img
-          src="${escapeHTML(evidence.previewUrl)}"
-          alt="${escapeHTML(
+        <iframe
+          src="${escapeHTML(
+            evidence.previewUrl
+          )}"
+          title="${escapeHTML(
             evidence.title ||
             "Vista previa del proyecto"
           )}"
-        />
-      </div>
-    `;
+          loading="lazy"
+        ></iframe>
 
-  } else {
+      `;
 
-    preview.innerHTML = `
-      <iframe
-        src="${escapeHTML(evidence.previewUrl)}"
-        title="${escapeHTML(
-          evidence.title ||
-          "Vista previa del proyecto"
-        )}"
-        loading="lazy"
-      ></iframe>
-    `;
-
-  }
-
-} else {
+    } else {
 
       preview.innerHTML = `
 
@@ -384,10 +325,6 @@ if (evidence.previewUrl) {
 
     }
 
-
-    /*
-      ENLACES
-    */
 
     if (
       evidence.links &&
@@ -422,19 +359,15 @@ if (evidence.previewUrl) {
   }
 
 
-
   /*
     MOSTRAR DETALLE
   */
 
   projectsSection.hidden = true;
-
   detailSection.hidden = false;
-
 
   window.location.hash =
     `proyecto=${project.id}`;
-
 
   detailSection.scrollIntoView({
     behavior: "smooth",
@@ -442,7 +375,6 @@ if (evidence.previewUrl) {
   });
 
 }
-
 
 
 /* ==================================================
@@ -463,7 +395,6 @@ function attachProjectLinks() {
 
           event.preventDefault();
 
-
           openProjectDetail(
             link.dataset.projectId
           );
@@ -474,7 +405,6 @@ function attachProjectLinks() {
     });
 
 }
-
 
 
 /* ==================================================
@@ -488,21 +418,21 @@ function closeProjectDetail() {
       "proyectos"
     );
 
-
   const detailSection =
     document.getElementById(
       "project-detail"
     );
 
+  if (!projectsSection || !detailSection) {
+    return;
+  }
 
   detailSection.hidden = true;
 
   projectsSection.hidden = false;
 
-
   window.location.hash =
     "proyectos";
-
 
   projectsSection.scrollIntoView({
     behavior: "smooth",
@@ -512,16 +442,22 @@ function closeProjectDetail() {
 }
 
 
-
 /* ==================================================
    SKILLS
 =================================================== */
 
 function renderSkills() {
 
-  document.getElementById(
-    "skillGroups"
-  ).innerHTML =
+  const container =
+    document.getElementById(
+      "skillGroups"
+    );
+
+  if (!container) {
+    return;
+  }
+
+  container.innerHTML =
 
     SKILLS.map(group => `
 
@@ -532,7 +468,6 @@ function renderSkills() {
             group.group
           )}
         </h3>
-
 
         <div>
 
@@ -553,7 +488,6 @@ function renderSkills() {
 }
 
 
-
 /* ==================================================
    CONTACTO
 =================================================== */
@@ -565,6 +499,9 @@ function renderContact() {
       "contactLinks"
     );
 
+  if (!links) {
+    return;
+  }
 
   links.innerHTML = `
 
@@ -576,7 +513,6 @@ function renderContact() {
       )} ↗
     </a>
 
-
     <a
       href="${SITE.linkedin}"
       target="_blank"
@@ -584,7 +520,6 @@ function renderContact() {
     >
       LinkedIn ↗
     </a>
-
 
     <a
       href="${SITE.github}"
@@ -597,13 +532,17 @@ function renderContact() {
   `;
 
 
-  document.getElementById(
-    "githubNav"
-  ).href =
-    SITE.github;
+  const githubNav =
+    document.getElementById(
+      "githubNav"
+    );
+
+  if (githubNav) {
+    githubNav.href =
+      SITE.github;
+  }
 
 }
-
 
 
 /* ==================================================
@@ -630,11 +569,9 @@ function setupFilters() {
 
             });
 
-
           button.classList.add(
             "active"
           );
-
 
           renderProjects(
             button.dataset.filter
@@ -646,7 +583,6 @@ function setupFilters() {
     });
 
 }
-
 
 
 /* ==================================================
@@ -668,7 +604,6 @@ function setupDomainLinks() {
           const filter =
             link.dataset.filterLink;
 
-
           setTimeout(() => {
 
             const button =
@@ -676,11 +611,8 @@ function setupDomainLinks() {
                 `.filter[data-filter="${filter}"]`
               );
 
-
             if (button) {
-
               button.click();
-
             }
 
           }, 100);
@@ -693,7 +625,6 @@ function setupDomainLinks() {
 }
 
 
-
 /* ==================================================
    HASH
 =================================================== */
@@ -702,7 +633,6 @@ function handleHash() {
 
   const hash =
     window.location.hash;
-
 
   if (
     hash.startsWith(
@@ -716,15 +646,39 @@ function handleHash() {
         ""
       );
 
-
     openProjectDetail(
       projectId
     );
 
+  } else {
+
+    /*
+      IMPORTANTE:
+      Si no estamos viendo un proyecto,
+      mostramos nuevamente la sección.
+    */
+
+    const projectsSection =
+      document.getElementById(
+        "proyectos"
+      );
+
+    const detailSection =
+      document.getElementById(
+        "project-detail"
+      );
+
+    if (projectsSection) {
+      projectsSection.hidden = false;
+    }
+
+    if (detailSection) {
+      detailSection.hidden = true;
+    }
+
   }
 
 }
-
 
 
 /* ==================================================
@@ -746,19 +700,28 @@ document.addEventListener(
     setupDomainLinks();
 
 
-    document
-      .getElementById(
+    const backButton =
+      document.getElementById(
         "backToProjects"
-      )
-      .addEventListener(
+      );
+
+    if (backButton) {
+
+      backButton.addEventListener(
         "click",
         closeProjectDetail
       );
 
-     window.addEventListener(
+    }
+
+
+    window.addEventListener(
       "hashchange",
       handleHash
     );
+
+
     handleHash();
+
   }
 );
