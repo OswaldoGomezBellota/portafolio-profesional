@@ -563,20 +563,21 @@ const PROJECTS = [
       ],
 
 
-   evidence: {
-     title: "Dashboard en Tableau",
-     type: "TABLEAU",
-     previewUrl: "proyectos/01-data-analytics-bi/tableau-dashboard/assets/dashboard-tableau.png",
-      links: [
-        {
-          label: "Ver dashboard interactivo en Tableau Public",
-          url: "https://public.tableau.com/app/profile/oswaldo.gomez.bellota/viz/ProyFinal_Dashboard/Dashboard1?publish=yes"
-        },
-        {
-          label: "Ver proyecto en GitHub",
-          url: "https://github.com/OswaldoGomezBellota/portafolio-profesional/tree/main/proyectos/01-data-analytics-bi/tableau-dashboard"
-        }
-      ]
+      evidence: {
+        title: "Dashboard en Tableau",
+        type: "TABLEAU",
+        previewUrl: "proyectos/01-data-analytics-bi/tableau-dashboard/assets/dashboard-tableau.png",
+        links: [
+          {
+            label: "Ver dashboard interactivo en Tableau Public",
+            url: "https://public.tableau.com/app/profile/oswaldo.gomez.bellota/viz/ProyFinal_Dashboard/Dashboard1?publish=yes"
+          },
+          {
+            label: "Ver proyecto en GitHub",
+            url: "https://github.com/OswaldoGomezBellota/portafolio-profesional/tree/main/proyectos/01-data-analytics-bi/tableau-dashboard"
+          }
+        ]
+      }
     }
   }
 
