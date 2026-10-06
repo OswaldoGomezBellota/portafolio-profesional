@@ -287,7 +287,7 @@ const PROJECTS = [
   {
     id: "model-fitness",
 
-    title: "Model Fitness — Retención",
+    title: "Model Fitness — Predicción y estrategia de retención",
 
     category: "data",
     categoryLabel: "Machine Learning",
@@ -318,10 +318,27 @@ const PROJECTS = [
 
       evidence: {
 
-        title: "Model Fitness",
-        type: "MACHINE LEARNING",
+        title: "Jupyter Notebook",
+        type: ".html",
 
-        links: []
+        previewUrl:
+          "proyectos/01-data-analytics-bi/model-fitness-retencion/Proyecto_Model_Fitness_Retencion.html",
+
+        links: [
+          {
+            label: "Abrir Notebook en GitHub",
+
+            url:
+              "https://github.com/OswaldoGomezBellota/portafolio-profesional/blob/main/proyectos/01-data-analytics-bi/model-fitness-retencion/Proyecto_Model_Fitness_Retencion.ipynb"
+          },
+
+          {
+            label: "Ver proyecto en GitHub",
+
+            url:
+              "https://github.com/OswaldoGomezBellota/portafolio-profesional/tree/main/proyectos/01-data-analytics-bi/model-fitness-retencion"
+          }
+        ]
       }
     }
   },
